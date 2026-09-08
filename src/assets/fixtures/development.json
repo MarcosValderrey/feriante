@@ -1,0 +1,172 @@
+{
+    "organizers": [
+        {
+            "name": "Feria Palermo",
+            "description": "Feria artesanal de Palermo"
+        },
+        {
+            "name": "Feria San Telmo",
+            "description": "Feria de artesanos de San Telmo"
+        },
+        {
+            "name": "Feria Navideña",
+            "description": "Feria especial de fin de año"
+        }
+    ],
+    "workdays": [
+        {
+            "organizer": "Feria Palermo",
+            "date": "2023-02-20",
+            "description": "Feria de verano"
+        },
+        {
+            "organizer": "Feria Palermo",
+            "date": "2023-03-05",
+            "description": ""
+        },
+        {
+            "organizer": "Feria San Telmo",
+            "date": "2023-03-12",
+            "description": ""
+        },
+        {
+            "organizer": "Feria Navideña",
+            "date": "2023-12-23",
+            "description": "Feria de Navidad"
+        }
+    ],
+    "products": [
+        {
+            "name": "Vela aromática",
+            "description": ""
+        },
+        {
+            "name": "Aros",
+            "description": ""
+        },
+        {
+            "name": "Pulsera",
+            "description": ""
+        },
+        {
+            "name": "Collar",
+            "description": ""
+        },
+        {
+            "name": "Porta sahumerio",
+            "description": ""
+        }
+    ],
+    "sales": [
+        {
+            "workday": {
+                "organizer": "Feria Palermo",
+                "date": "2023-02-20"
+            },
+            "product": "Vela aromática",
+            "quantity": 3,
+            "totalPrice": 9000,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "Feria Palermo",
+                "date": "2023-02-20"
+            },
+            "product": "Aros",
+            "quantity": 2,
+            "totalPrice": 6000,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "Feria Palermo",
+                "date": "2023-02-20"
+            },
+            "product": "Pulsera",
+            "quantity": 5,
+            "totalPrice": 10000,
+            "note": "Pagó una parte"
+        },
+        {
+            "workday": {
+                "organizer": "Feria Palermo",
+                "date": "2023-03-05"
+            },
+            "product": "Vela aromática",
+            "quantity": 7,
+            "totalPrice": 21000,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "Feria Palermo",
+                "date": "2023-03-05"
+            },
+            "product": "Collar",
+            "quantity": 2,
+            "totalPrice": 14000,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "Feria San Telmo",
+                "date": "2023-03-12"
+            },
+            "product": "Aros",
+            "quantity": 4,
+            "totalPrice": 12000,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "Feria San Telmo",
+                "date": "2023-03-12"
+            },
+            "product": "Pulsera",
+            "quantity": 3,
+            "totalPrice": 6000,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "Feria San Telmo",
+                "date": "2023-03-12"
+            },
+            "product": "Porta sahumerio",
+            "quantity": 2,
+            "totalPrice": 8000,
+            "note": "Reservado"
+        },
+        {
+            "workday": {
+                "organizer": "Feria Navideña",
+                "date": "2023-12-23"
+            },
+            "product": "Vela aromática",
+            "quantity": 10,
+            "totalPrice": 30000,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "Feria Navideña",
+                "date": "2023-12-23"
+            },
+            "product": "Collar",
+            "quantity": 5,
+            "totalPrice": 35000,
+            "note": "Pagó $20.000"
+        },
+        {
+            "workday": {
+                "organizer": "Feria Navideña",
+                "date": "2023-12-23"
+            },
+            "product": "Aros",
+            "quantity": 6,
+            "totalPrice": 18000,
+            "note": ""
+        }
+    ]
+}

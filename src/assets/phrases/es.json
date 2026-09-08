@@ -1,0 +1,165 @@
+{
+    "App": {
+        "paths": {
+            "development": "/desarrollo",
+            "products": "/productos",
+            "sales": "/ventas",
+            "summary": "/resumen"
+        }
+    },
+    "components": {
+        "common": {
+            "Header": {
+                "development": "Desarrollo",
+                "products": "Productos",
+                "sales": "Ventas",
+                "summary": "Resumen"
+            }
+        },
+        "pages": {
+            "DevelopmentPage": {
+                "title": "Desarrollo",
+                "subtitle": "Cargá datos de prueba para explorar y validar la aplicación",
+                "import": {
+                    "title": "Importar datos",
+                    "description": "Importa datos desde un archivo JSON"
+                },
+                "delete": {
+                    "title": "Base de datos",
+                    "description": "Elimina todos los datos almancenados localmente en esta aplicación",
+                    "button": "Eliminar base de datos",
+                    "success": "La base de datos fue eliminada correctamente",
+                    "error": "No se pudo eliminar la base de datos",
+                    "modal": {
+                        "title": "Eliminar base de datos",
+                        "question": "¿Estás seguro de que querés eliminar todos los datos?",
+                        "warning": "Esta acción no se puede deshacer",
+                        "cancel": "Cancelar",
+                        "confirm": "Eliminar todo",
+                        "deleting": "Eliminando..."
+                    }
+                },
+                "data": {
+                    "development": {
+                        "title": "Datos de prueba",
+                        "description": "Cargá los datos de prueba incluidos en la aplicación",
+                        "button": "Cargar datos de prueba",
+                        "importing": "Importando..."
+                    },
+                    "production": {
+                        "title": "Datos de producción",
+                        "description": "Cargá los datos de producción incluidos en la aplicación",
+                        "button": "Cargar datos de producción",
+                        "importing": "Importando..."
+                    }
+                }
+            },
+            "HomePage": {
+                "title": "¿Qué querés hacer?",
+                "subtitle": "Elegí una opción para comenzar.",
+                "links": {
+                    "development": {
+                        "title": "Desarrollo",
+                        "description": "Cargá datos de prueba para explorar y validar la aplicación"
+                    },
+                    "products": {
+                        "title": "Productos",
+                        "description": "Administrá tus productos"
+                    },
+                    "sales": {
+                        "title": "Ventas",
+                        "description": "Registrá lo que vendiste"
+                    },
+                    "summary": {
+                        "title": "Resumen",
+                        "description": "Mirá cómo vienen tus ventas"
+                    }
+                }
+            },
+            "ProductsPage": {
+                "title": "Productos",
+                "subtitle": "Gestioná los productos que vendés",
+                "new": "Nuevo producto",
+                "empty": "No hay productos registrados",
+                "table": {
+                    "name": "Nombre",
+                    "description": "Descripción"
+                }
+            },
+            "SalesPage": {
+                "title": "Ventas",
+                "subtitle": "Registrá lo que vendiste",
+                "new": "Nueva venta",
+                "empty": "No hay ventas registradas",
+                "table": {
+                    "quantity": "Cantidad",
+                    "name": "Producto",
+                    "note": "Nota",
+                    "price": "Precio",
+                    "previous": "Anterior",
+                    "next": "Siguiente"
+                },
+                "total": {
+                    "name": "Productos"
+                },
+                "error": {
+                    "sales": "No se pudieron cargar las ventas",
+                    "workdays": "No se pudieron cargar las jornadas"
+                }
+            },
+            "SummaryPage": {
+                "title": "Resumen",
+                "subtitle": "Mirá cómo vienen tus ventas",
+                "empty": "No hay datos suficientes para mostrar el resumen",
+                "unavailable": "Sin datos",
+                "quantity": "unidades",
+                "headlines": {
+                    "totalQuantity": "Productos vendidos",
+                    "totalRevenue": "Facturación",
+                    "totalProducts": "Productos únicos",
+                    "totalWorkdays": "Jornadas",
+                    "totalOrganizers": "Organizadores"
+                },
+                "records": {
+                    "biggestSaleByQuantity": "Mayor venta",
+                    "biggestSaleByRevenue": "Mayor facturación en una venta",
+                    "mostQuantityByWorkday": "Jornada con más ventas",
+                    "mostRevenueByWorkday": "Jornada con mayor facturación",
+                    "oldestWorkday": {
+                        "title": "Primer registro",
+                        "subtitle": "Jornada más antigua registrada"
+                    },
+                    "newestWorkday": {
+                        "title": "Último registro",
+                        "subtitle": "Jornada más nueva registrada"
+                    }
+                },
+                "products": {
+                    "title": "Productos",
+                    "byQuantity": "Más vendidos",
+                    "byRevenue": "Mejor facturados"
+                },
+                "organizers": {
+                    "title": "Organizadores",
+                    "byQuantity": "Por productos vendidos",
+                    "byRevenue": "Por facturación generada"
+                },
+                "workdays": {
+                    "title": "Jornadas",
+                    "byQuantity": "Por productos vendidos",
+                    "byRevenue": "Por facturación generada"
+                }
+            }
+        }
+    },
+    "models": {
+        "Booleans": {
+            "yes": "Sí",
+            "no": "No"
+        },
+        "Settings": {
+            "language": "Lenguaje",
+            "lastUpdate": "Última Actualización"
+        }
+    }
+}

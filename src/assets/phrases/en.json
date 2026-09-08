@@ -1,0 +1,70 @@
+{
+    "App": {
+        "paths": {
+            "development": "/development",
+            "products": "/products",
+            "sales": "/sales",
+            "summary": "/summary"
+        }
+    },
+    "components": {
+        "common": {
+            "Header": {
+                "development": "Development",
+                "products": "Products",
+                "sales": "Sales",
+                "summary": "Summary"
+            }
+        },
+        "pages": {
+            "DevelopmentPage": {
+                "title": "Development",
+                "subtitle": "Load test data to explore and validate the application"
+            },
+            "HomePage": {
+                "title": "What do you want to do?",
+                "subtitle": "Select an option to start.",
+                "links": {
+                    "development": {
+                        "title": "Development",
+                        "description": "Load test data to explore and validate the application"
+                    },
+                    "products": {
+                        "title": "Products",
+                        "description": "Manage your products"
+                    },
+                    "sales": {
+                        "title": "Sales",
+                        "description": "Register what you sold"
+                    },
+                    "summary": {
+                        "title": "Summary",
+                        "description": "Watch how your sales are going"
+                    }
+                }
+            },
+            "ProductsPage": {
+                "title": "Products",
+                "subtitle": "Manage your products"
+            },
+            "SalesPage": {
+                "title": "Sales",
+                "subtitle": "Register what you sold"
+            },
+            "SummaryPage": {
+                "title": "Summary",
+                "subtitle": "Watch how your sales are going"
+            }
+        }
+    },
+    "models": {
+        "Booleans": {
+            "yes": "Yes",
+            "no": "No"
+        },
+        "Settings": {
+            "language": "Language",
+            "lastUpdate": "Last Update"
+        }
+    }
+}
