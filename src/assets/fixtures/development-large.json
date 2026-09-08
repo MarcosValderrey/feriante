@@ -39,6 +39,11 @@
     ],
     "workdays": [
         {
+            "organizer": "Feria Plaza Pringles",
+            "date": "2022-10-16",
+            "description": "Día de la Madre"
+        },
+        {
             "organizer": "?",
             "date": "2022-12-21",
             "description": "Compart"
@@ -793,9 +798,1239 @@
         {
             "name": "Porta Celular",
             "description": ""
+        },
+        {
+            "name": "Gato Reloj",
+            "description": ""
+        },
+        {
+            "name": "Espejo Ojo",
+            "description": ""
         }
     ],
     "sales": [
+        {
+            "workday": {
+                "organizer": "Feria Plaza Pringles",
+                "date": "2022-10-11"
+            },
+            "product": "Porta Velas",
+            "quantity": 1,
+            "totalPrice": 800,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "Feria Plaza Pringles",
+                "date": "2022-10-11"
+            },
+            "product": "Porta Velas",
+            "quantity": 1,
+            "totalPrice": 800,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "Feria Plaza Pringles",
+                "date": "2022-10-11"
+            },
+            "product": "Porta Sahumerio de Cerámica",
+            "quantity": 1,
+            "totalPrice": 800,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "Feria Plaza Pringles",
+                "date": "2022-10-11"
+            },
+            "product": "Porta Sahumerio de Cerámica",
+            "quantity": 1,
+            "totalPrice": 800,
+            "note": "MP"
+        },
+
+        {
+            "workday": {
+                "organizer": "Feria Plaza Pringles",
+                "date": "2022-10-12"
+            },
+            "product": "Porta Velas",
+            "quantity": 3,
+            "totalPrice": 1500,
+            "note": "MP"
+        },
+        {
+            "workday": {
+                "organizer": "Feria Plaza Pringles",
+                "date": "2022-10-12"
+            },
+            "product": "Porta Rollo",
+            "quantity": 1,
+            "totalPrice": 1900,
+            "note": ""
+        },
+
+        {
+            "workday": {
+                "organizer": "Feria Plaza Pringles",
+                "date": "2022-10-13"
+            },
+            "product": "Porta Sahumerio de Cerámica",
+            "quantity": 1,
+            "totalPrice": 800,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "Feria Plaza Pringles",
+                "date": "2022-10-13"
+            },
+            "product": "Porta Sahumerio de Cerámica",
+            "quantity": 3,
+            "totalPrice": 2400,
+            "note": "MP"
+        },
+        {
+            "workday": {
+                "organizer": "Feria Plaza Pringles",
+                "date": "2022-10-13"
+            },
+            "product": "Porta Sahumerio Cuadrado",
+            "quantity": 1,
+            "totalPrice": 600,
+            "note": "MP"
+        },
+        {
+            "workday": {
+                "organizer": "Feria Plaza Pringles",
+                "date": "2022-10-13"
+            },
+            "product": "Caja Porta Sahumerios",
+            "quantity": 1,
+            "totalPrice": 1800,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "Feria Plaza Pringles",
+                "date": "2022-10-13"
+            },
+            "product": "Ojo Chico",
+            "quantity": 1,
+            "totalPrice": 1200,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "Feria Plaza Pringles",
+                "date": "2022-10-13"
+            },
+            "product": "Llamador de Ángeles",
+            "quantity": 1,
+            "totalPrice": 1500,
+            "note": ""
+        },
+
+        {
+            "workday": {
+                "organizer": "Feria Plaza Pringles",
+                "date": "2022-10-14"
+            },
+            "product": "Llamador de Ángeles",
+            "quantity": 1,
+            "totalPrice": 1500,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "Feria Plaza Pringles",
+                "date": "2022-10-14"
+            },
+            "product": "Imán",
+            "quantity": 1,
+            "totalPrice": 200,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "Feria Plaza Pringles",
+                "date": "2022-10-14"
+            },
+            "product": "Almanaque",
+            "quantity": 2,
+            "totalPrice": 400,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "Feria Plaza Pringles",
+                "date": "2022-10-14"
+            },
+            "product": "Llamador de Ángeles",
+            "quantity": 1,
+            "totalPrice": 1500,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "Feria Plaza Pringles",
+                "date": "2022-10-14"
+            },
+            "product": "Ojo Chico",
+            "quantity": 1,
+            "totalPrice": 1200,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "Feria Plaza Pringles",
+                "date": "2022-10-14"
+            },
+            "product": "Maceta Chica",
+            "quantity": 1,
+            "totalPrice": 600,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "Feria Plaza Pringles",
+                "date": "2022-10-14"
+            },
+            "product": "Llamador de Ángeles",
+            "quantity": 1,
+            "totalPrice": 1500,
+            "note": "MP"
+        },
+        {
+            "workday": {
+                "organizer": "Feria Plaza Pringles",
+                "date": "2022-10-14"
+            },
+            "product": "Porta Sahumerio Cuadrado",
+            "quantity": 1,
+            "totalPrice": 600,
+            "note": "MP"
+        },
+        {
+            "workday": {
+                "organizer": "Feria Plaza Pringles",
+                "date": "2022-10-14"
+            },
+            "product": "Caja Chica",
+            "quantity": 1,
+            "totalPrice": 2100,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "Feria Plaza Pringles",
+                "date": "2022-10-14"
+            },
+            "product": "Porta Rollo",
+            "quantity": 1,
+            "totalPrice": 1900,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "Feria Plaza Pringles",
+                "date": "2022-10-14"
+            },
+            "product": "Porta Sahumerio Cuadrado",
+            "quantity": 1,
+            "totalPrice": 300,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "Feria Plaza Pringles",
+                "date": "2022-10-14"
+            },
+            "product": "Almanaque",
+            "quantity": 1,
+            "totalPrice": 200,
+            "note": ""
+        },
+
+        {
+            "workday": {
+                "organizer": "Feria Plaza Pringles",
+                "date": "2022-10-15"
+            },
+            "product": "Caja Chica",
+            "quantity": 1,
+            "totalPrice": 2100,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "Feria Plaza Pringles",
+                "date": "2022-10-15"
+            },
+            "product": "Ojo Grande",
+            "quantity": 1,
+            "totalPrice": 4200,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "Feria Plaza Pringles",
+                "date": "2022-10-15"
+            },
+            "product": "Almanaque",
+            "quantity": 1,
+            "totalPrice": 200,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "Feria Plaza Pringles",
+                "date": "2022-10-15"
+            },
+            "product": "Porta Sahumerio de Cerámica",
+            "quantity": 1,
+            "totalPrice": 800,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "Feria Plaza Pringles",
+                "date": "2022-10-15"
+            },
+            "product": "Porta Sahumerio de Cerámica",
+            "quantity": 1,
+            "totalPrice": 700,
+            "note": ""
+        },
+
+        {
+            "workday": {
+                "organizer": "Feria Plaza Pringles",
+                "date": "2022-10-16"
+            },
+            "product": "Porta Sahumerio Cuadrado",
+            "quantity": 1,
+            "totalPrice": 300,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "Feria Plaza Pringles",
+                "date": "2022-10-16"
+            },
+            "product": "Almanaque",
+            "quantity": 1,
+            "totalPrice": 200,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "Feria Plaza Pringles",
+                "date": "2022-10-16"
+            },
+            "product": "Almanaque",
+            "quantity": 1,
+            "totalPrice": 200,
+            "note": ""
+        },
+
+        {
+            "workday": {
+                "organizer": "?",
+                "date": "2022-10-23"
+            },
+            "product": "Ojo Chico",
+            "quantity": 1,
+            "totalPrice": 1200,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "?",
+                "date": "2022-10-23"
+            },
+            "product": "Almanaque",
+            "quantity": 1,
+            "totalPrice": 200,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "?",
+                "date": "2022-10-23"
+            },
+            "product": "Porta Sahumerio de Cerámica",
+            "quantity": 2,
+            "totalPrice": 1600,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "?",
+                "date": "2022-10-23"
+            },
+            "product": "Caja Porta Sahumerios",
+            "quantity": 1,
+            "totalPrice": 600,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "?",
+                "date": "2022-10-23"
+            },
+            "product": "Reloj de Espejos",
+            "quantity": 1,
+            "totalPrice": 4000,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "?",
+                "date": "2022-10-23"
+            },
+            "product": "Caja Porta Sahumerios",
+            "quantity": 2,
+            "totalPrice": 1200,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "?",
+                "date": "2022-10-23"
+            },
+            "product": "Almanaque",
+            "quantity": 1,
+            "totalPrice": 200,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "?",
+                "date": "2022-10-23"
+            },
+            "product": "Porta Sahumerio Cuadrado",
+            "quantity": 1,
+            "totalPrice": 300,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "?",
+                "date": "2022-10-23"
+            },
+            "product": "Llamador de Ángeles",
+            "quantity": 1,
+            "totalPrice": 1500,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "?",
+                "date": "2022-10-23"
+            },
+            "product": "Almanaque",
+            "quantity": 6,
+            "totalPrice": 1200,
+            "note": ""
+        },
+
+        {
+            "workday": {
+                "organizer": "?",
+                "date": "2022-11-06"
+            },
+            "product": "Almanaque",
+            "quantity": 1,
+            "totalPrice": 200,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "?",
+                "date": "2022-11-06"
+            },
+            "product": "Porta Sahumerio Cuadrado",
+            "quantity": 1,
+            "totalPrice": 300,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "?",
+                "date": "2022-11-06"
+            },
+            "product": "Almanaque",
+            "quantity": 1,
+            "totalPrice": 200,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "?",
+                "date": "2022-11-06"
+            },
+            "product": "Almanaque",
+            "quantity": 1,
+            "totalPrice": 200,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "?",
+                "date": "2022-11-06"
+            },
+            "product": "Llamador de Ángeles",
+            "quantity": 1,
+            "totalPrice": 1500,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "?",
+                "date": "2022-11-06"
+            },
+            "product": "Porta Sahumerio Cuadrado",
+            "quantity": 1,
+            "totalPrice": 300,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "?",
+                "date": "2022-11-06"
+            },
+            "product": "Almanaque",
+            "quantity": 1,
+            "totalPrice": 200,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "?",
+                "date": "2022-11-06"
+            },
+            "product": "Almanaque",
+            "quantity": 1,
+            "totalPrice": 200,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "?",
+                "date": "2022-11-06"
+            },
+            "product": "Almanaque",
+            "quantity": 1,
+            "totalPrice": 200,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "?",
+                "date": "2022-11-06"
+            },
+            "product": "Llamador de Ángeles",
+            "quantity": 1,
+            "totalPrice": 1500,
+            "note": "MP"
+        },
+        {
+            "workday": {
+                "organizer": "?",
+                "date": "2022-11-06"
+            },
+            "product": "Espejo Ojo",
+            "quantity": 1,
+            "totalPrice": 3200,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "?",
+                "date": "2022-11-06"
+            },
+            "product": "Ojo Chico",
+            "quantity": 1,
+            "totalPrice": 1200,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "?",
+                "date": "2022-11-06"
+            },
+            "product": "Almanaque",
+            "quantity": 50,
+            "totalPrice": 10000,
+            "note": ""
+        },
+
+        {
+            "workday": {
+                "organizer": "Colectividades",
+                "date": "2022-11-12"
+            },
+            "product": "Almanaque",
+            "quantity": 1,
+            "totalPrice": 200,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "Colectividades",
+                "date": "2022-11-12"
+            },
+            "product": "Porta Sahumerio Cuadrado",
+            "quantity": 1,
+            "totalPrice": 300,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "Colectividades",
+                "date": "2022-11-12"
+            },
+            "product": "Lechuza Chica",
+            "quantity": 1,
+            "totalPrice": 1500,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "Colectividades",
+                "date": "2022-11-12"
+            },
+            "product": "Almanaque",
+            "quantity": 1,
+            "totalPrice": 200,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "Colectividades",
+                "date": "2022-11-12"
+            },
+            "product": "Porta Sahumerio de Cerámica",
+            "quantity": 1,
+            "totalPrice": 800,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "Colectividades",
+                "date": "2022-11-12"
+            },
+            "product": "Llamador de Ángeles",
+            "quantity": 2,
+            "totalPrice": 3000,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "Colectividades",
+                "date": "2022-11-12"
+            },
+            "product": "Caja Porta Sahumerios",
+            "quantity": 1,
+            "totalPrice": 600,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "Colectividades",
+                "date": "2022-11-12"
+            },
+            "product": "Almanaque",
+            "quantity": 1,
+            "totalPrice": 200,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "Colectividades",
+                "date": "2022-11-12"
+            },
+            "product": "Porta Sahumerio Cuadrado",
+            "quantity": 1,
+            "totalPrice": 300,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "Colectividades",
+                "date": "2022-11-12"
+            },
+            "product": "Porta Sahumerio de Cerámica",
+            "quantity": 1,
+            "totalPrice": 800,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "Colectividades",
+                "date": "2022-11-12"
+            },
+            "product": "Llamador de Ángeles",
+            "quantity": 1,
+            "totalPrice": 1500,
+            "note": "MP"
+        },
+        {
+            "workday": {
+                "organizer": "Colectividades",
+                "date": "2022-11-12"
+            },
+            "product": "Almanaque",
+            "quantity": 1,
+            "totalPrice": 200,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "Colectividades",
+                "date": "2022-11-12"
+            },
+            "product": "Colibrí",
+            "quantity": 1,
+            "totalPrice": 1600,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "Colectividades",
+                "date": "2022-11-12"
+            },
+            "product": "Reloj de Espejos",
+            "quantity": 1,
+            "totalPrice": 5000,
+            "note": ""
+        },
+
+        {
+            "workday": {
+                "organizer": "Colectividades",
+                "date": "2022-11-18"
+            },
+            "product": "Almanaque",
+            "quantity": 1,
+            "totalPrice": 200,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "Colectividades",
+                "date": "2022-11-18"
+            },
+            "product": "Llamador de Ángeles",
+            "quantity": 1,
+            "totalPrice": 1500,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "Colectividades",
+                "date": "2022-11-18"
+            },
+            "product": "Almanaque",
+            "quantity": 1,
+            "totalPrice": 200,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "Colectividades",
+                "date": "2022-11-18"
+            },
+            "product": "Apoya Celular",
+            "quantity": 1,
+            "totalPrice": 900,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "Colectividades",
+                "date": "2022-11-18"
+            },
+            "product": "Almanaque",
+            "quantity": 2,
+            "totalPrice": 400,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "Colectividades",
+                "date": "2022-11-18"
+            },
+            "product": "Porta Sahumerio Cuadrado",
+            "quantity": 1,
+            "totalPrice": 300,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "Colectividades",
+                "date": "2022-11-18"
+            },
+            "product": "Almanaque",
+            "quantity": 1,
+            "totalPrice": 200,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "Colectividades",
+                "date": "2022-11-18"
+            },
+            "product": "Llamador de Ángeles",
+            "quantity": 1,
+            "totalPrice": 1500,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "Colectividades",
+                "date": "2022-11-18"
+            },
+            "product": "Cenicero",
+            "quantity": 1,
+            "totalPrice": 900,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "Colectividades",
+                "date": "2022-11-18"
+            },
+            "product": "Almanaque",
+            "quantity": 4,
+            "totalPrice": 800,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "Colectividades",
+                "date": "2022-11-18"
+            },
+            "product": "Llamador de Ángeles",
+            "quantity": 1,
+            "totalPrice": 1500,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "Colectividades",
+                "date": "2022-11-18"
+            },
+            "product": "Almanaque",
+            "quantity": 1,
+            "totalPrice": 200,
+            "note": ""
+        },
+
+        {
+            "workday": {
+                "organizer": "Colectividades",
+                "date": "2022-11-19"
+            },
+            "product": "Almanaque",
+            "quantity": 2,
+            "totalPrice": 400,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "Colectividades",
+                "date": "2022-11-19"
+            },
+            "product": "Almanaque",
+            "quantity": 2,
+            "totalPrice": 400,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "Colectividades",
+                "date": "2022-11-19"
+            },
+            "product": "Almanaque",
+            "quantity": 1,
+            "totalPrice": 200,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "Colectividades",
+                "date": "2022-11-19"
+            },
+            "product": "Almanaque",
+            "quantity": 1,
+            "totalPrice": 200,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "Colectividades",
+                "date": "2022-11-19"
+            },
+            "product": "Almanaque",
+            "quantity": 8,
+            "totalPrice": 1600,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "Colectividades",
+                "date": "2022-11-19"
+            },
+            "product": "Almanaque",
+            "quantity": 1,
+            "totalPrice": 200,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "Colectividades",
+                "date": "2022-11-19"
+            },
+            "product": "Gato Reloj",
+            "quantity": 1,
+            "totalPrice": 4000,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "Colectividades",
+                "date": "2022-11-19"
+            },
+            "product": "Llamador de Ángeles",
+            "quantity": 1,
+            "totalPrice": 1500,
+            "note": ""
+        },
+
+        {
+            "workday": {
+                "organizer": "?",
+                "date": "2022-11-21"
+            },
+            "product": "Almanaque",
+            "quantity": 2,
+            "totalPrice": 400,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "?",
+                "date": "2022-11-21"
+            },
+            "product": "Almanaque",
+            "quantity": 1,
+            "totalPrice": 200,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "?",
+                "date": "2022-11-21"
+            },
+            "product": "Porta Sahumerio Cuadrado",
+            "quantity": 1,
+            "totalPrice": 300,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "?",
+                "date": "2022-11-21"
+            },
+            "product": "Porta Sahumerio de Cerámica",
+            "quantity": 1,
+            "totalPrice": 800,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "?",
+                "date": "2022-11-21"
+            },
+            "product": "Porta Sahumerio de Cerámica",
+            "quantity": 1,
+            "totalPrice": 800,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "?",
+                "date": "2022-11-21"
+            },
+            "product": "Almanaque",
+            "quantity": 2,
+            "totalPrice": 400,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "?",
+                "date": "2022-11-21"
+            },
+            "product": "Almanaque",
+            "quantity": 1,
+            "totalPrice": 200,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "?",
+                "date": "2022-11-21"
+            },
+            "product": "Almanaque",
+            "quantity": 5,
+            "totalPrice": 1000,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "?",
+                "date": "2022-11-21"
+            },
+            "product": "Almanaque",
+            "quantity": 1,
+            "totalPrice": 200,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "?",
+                "date": "2022-11-21"
+            },
+            "product": "Almanaque",
+            "quantity": 2,
+            "totalPrice": 400,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "?",
+                "date": "2022-11-21"
+            },
+            "product": "Porta Sahumerio Cuadrado",
+            "quantity": 1,
+            "totalPrice": 300,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "?",
+                "date": "2022-11-21"
+            },
+            "product": "Almanaque",
+            "quantity": 1,
+            "totalPrice": 200,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "?",
+                "date": "2022-11-21"
+            },
+            "product": "Porta Sahumerio Cuadrado",
+            "quantity": 3,
+            "totalPrice": 900,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "?",
+                "date": "2022-11-21"
+            },
+            "product": "Almanaque",
+            "quantity": 2,
+            "totalPrice": 400,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "?",
+                "date": "2022-11-21"
+            },
+            "product": "Almanaque",
+            "quantity": 2,
+            "totalPrice": 400,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "?",
+                "date": "2022-11-21"
+            },
+            "product": "Almanaque",
+            "quantity": 1,
+            "totalPrice": 200,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "?",
+                "date": "2022-11-21"
+            },
+            "product": "Almanaque",
+            "quantity": 1,
+            "totalPrice": 200,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "?",
+                "date": "2022-11-21"
+            },
+            "product": "Porta Sahumerio Cuadrado",
+            "quantity": 1,
+            "totalPrice": 300,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "?",
+                "date": "2022-11-21"
+            },
+            "product": "Almanaque",
+            "quantity": 1,
+            "totalPrice": 200,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "?",
+                "date": "2022-11-21"
+            },
+            "product": "Porta Sahumerio Cuadrado",
+            "quantity": 1,
+            "totalPrice": 300,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "?",
+                "date": "2022-11-21"
+            },
+            "product": "Ojo Chico",
+            "quantity": 1,
+            "totalPrice": 1200,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "?",
+                "date": "2022-11-21"
+            },
+            "product": "Porta Sahumerio Cuadrado",
+            "quantity": 1,
+            "totalPrice": 300,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "?",
+                "date": "2022-11-21"
+            },
+            "product": "Almanaque",
+            "quantity": 1,
+            "totalPrice": 200,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "?",
+                "date": "2022-11-21"
+            },
+            "product": "Almanaque",
+            "quantity": 1,
+            "totalPrice": 200,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "?",
+                "date": "2022-11-21"
+            },
+            "product": "Almanaque",
+            "quantity": 1,
+            "totalPrice": 200,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "?",
+                "date": "2022-11-21"
+            },
+            "product": "Porta Sahumerio Cuadrado",
+            "quantity": 1,
+            "totalPrice": 300,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "?",
+                "date": "2022-11-21"
+            },
+            "product": "Caja Porta Sahumerios",
+            "quantity": 1,
+            "totalPrice": 600,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "?",
+                "date": "2022-11-21"
+            },
+            "product": "Ojo Chico",
+            "quantity": 1,
+            "totalPrice": 1200,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "?",
+                "date": "2022-11-21"
+            },
+            "product": "Porta Sahumerio Cuadrado",
+            "quantity": 1,
+            "totalPrice": 300,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "?",
+                "date": "2022-11-21"
+            },
+            "product": "Llamador de Ángeles",
+            "quantity": 1,
+            "totalPrice": 1500,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "?",
+                "date": "2022-11-21"
+            },
+            "product": "Almanaque",
+            "quantity": 1,
+            "totalPrice": 200,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "?",
+                "date": "2022-11-21"
+            },
+            "product": "Porta Velas",
+            "quantity": 1,
+            "totalPrice": 600,
+            "note": ""
+        },
+
         {
             "workday": {
                 "organizer": "?",

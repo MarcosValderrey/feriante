@@ -41,16 +41,18 @@
                 },
                 "data": {
                     "development": {
-                        "title": "Datos de prueba",
-                        "description": "Cargá los datos de prueba incluidos en la aplicación",
-                        "button": "Cargar datos de prueba",
-                        "importing": "Importando..."
-                    },
-                    "production": {
-                        "title": "Datos de producción",
-                        "description": "Cargá los datos de producción incluidos en la aplicación",
-                        "button": "Cargar datos de producción",
-                        "importing": "Importando..."
+                        "small": {
+                            "title": "Datos de prueba",
+                            "description": "Cargá los datos de prueba incluidos en la aplicación",
+                            "button": "Cargar datos de prueba",
+                            "importing": "Importando..."
+                        },
+                        "large": {
+                            "title": "Datos de prueba",
+                            "description": "Cargá los datos de prueba incluidos en la aplicación",
+                            "button": "Cargar datos de prueba",
+                            "importing": "Importando..."
+                        }
                     }
                 }
             },

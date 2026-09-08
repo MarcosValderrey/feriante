@@ -13,8 +13,8 @@ import PageHeader from '../common/PageHeader.jsx';
 import { clearDatabase } from '../../backend/database.js';
 import { openDatabase } from '../../backend/database.js';
 import { importSemanticData } from '../../backend/migration.js';
-import developmentFixture from '../../assets/fixtures/development.json';
-import productionFixture from '../../assets/fixtures/production.json';
+import developmentSmallFixture from '../../assets/fixtures/development-small.json';
+import developmentLargeFixture from '../../assets/fixtures/development-large.json';
 import phrases from '../../utils/Phrases';
 
 
@@ -83,12 +83,12 @@ function DeveloperPage() {
         reader.readAsText(file);
     }
 
-    function handleDevelopmentFixtureImport() {
-        importData(developmentFixture);
+    function handleDevelopmentSmallImport() {
+        importData(developmentSmallFixture);
     }
 
-    function handleProductionFixtureImport() {
-        importData(productionFixture);
+    function handleDevelopmentLargeImport() {
+        importData(developmentLargeFixture);
     }
 
     async function handleDeleteDatabase() {
@@ -147,7 +147,69 @@ function DeveloperPage() {
                         </Card>
                     </Col>
 
+                    {/*
                     <Col xs={12} sm={6} lg={6}>
+                        <Card className='shadow-sm'>
+                            <Card.Body>
+                                <Card.Title>{phrases.get('components.pages.DevelopmentPage.data.development.small.title')}</Card.Title>
+
+                                <Card.Text className='text-body-secondary'>
+                                    {phrases.get('components.pages.DevelopmentPage.data.development.small.description')}
+                                </Card.Text>
+
+                                <Button
+                                    variant='primary'
+                                    onClick={handleDevelopmentSmallImport}
+                                    disabled={loading}
+                                >
+                                    {loading ? (
+                                        <>
+                                            <Spinner size='sm' className='me-2' />
+                                            <span>{phrases.get('components.pages.DevelopmentPage.data.development.small.importing')}</span>
+                                        </>
+                                    ) : (
+                                        <>
+                                            <i className='bi bi-database-add me-2'></i>
+                                            <span>{phrases.get('components.pages.DevelopmentPage.data.development.small.button')}</span>
+                                        </>
+                                    )}
+                                </Button>
+                            </Card.Body>
+                        </Card>
+                    </Col>
+                    */}
+
+                    <Col xs={12} sm={6} lg={6}>
+                        <Card className='shadow-sm'>
+                            <Card.Body>
+                                <Card.Title>{phrases.get('components.pages.DevelopmentPage.data.development.small.title')}</Card.Title>
+
+                                <Card.Text className='text-body-secondary'>
+                                    {phrases.get('components.pages.DevelopmentPage.data.development.small.description')}
+                                </Card.Text>
+
+                                <Button
+                                    variant='primary'
+                                    onClick={handleDevelopmentLargeImport}
+                                    disabled={loading}
+                                >
+                                    {loading ? (
+                                        <>
+                                            <Spinner size='sm' className='me-2' />
+                                            <span>{phrases.get('components.pages.DevelopmentPage.data.development.large.importing')}</span>
+                                        </>
+                                    ) : (
+                                        <>
+                                            <i className='bi bi-database-add me-2'></i>
+                                            <span>{phrases.get('components.pages.DevelopmentPage.data.development.large.button')}</span>
+                                        </>
+                                    )}
+                                </Button>
+                            </Card.Body>
+                        </Card>
+                    </Col>
+
+                    <Col xs={12} sm={12} lg={12}>
                         <Card className='shadow-sm' border='danger'>
                             <Card.Body>
                                 <Card.Title>{phrases.get('components.pages.DevelopmentPage.delete.title')}</Card.Title>
@@ -162,66 +224,6 @@ function DeveloperPage() {
                                 >
                                     <i className='bi bi-trash me-2'></i>
                                     <span>{phrases.get('components.pages.DevelopmentPage.delete.button')}</span>
-                                </Button>
-                            </Card.Body>
-                        </Card>
-                    </Col>
-
-                    <Col xs={12} sm={6} lg={6}>
-                        <Card className='shadow-sm'>
-                            <Card.Body>
-                                <Card.Title>{phrases.get('components.pages.DevelopmentPage.data.development.title')}</Card.Title>
-
-                                <Card.Text className='text-body-secondary'>
-                                    {phrases.get('components.pages.DevelopmentPage.data.development.description')}
-                                </Card.Text>
-
-                                <Button
-                                    variant='primary'
-                                    onClick={handleDevelopmentFixtureImport}
-                                    disabled={loading}
-                                >
-                                    {loading ? (
-                                        <>
-                                            <Spinner size='sm' className='me-2' />
-                                            <span>{phrases.get('components.pages.DevelopmentPage.data.development.importing')}</span>
-                                        </>
-                                    ) : (
-                                        <>
-                                            <i className='bi bi-database-add me-2'></i>
-                                            <span>{phrases.get('components.pages.DevelopmentPage.data.development.button')}</span>
-                                        </>
-                                    )}
-                                </Button>
-                            </Card.Body>
-                        </Card>
-                    </Col>
-
-                    <Col xs={12} sm={6} lg={6}>
-                        <Card className='shadow-sm'>
-                            <Card.Body>
-                                <Card.Title>{phrases.get('components.pages.DevelopmentPage.data.production.title')}</Card.Title>
-
-                                <Card.Text className='text-body-secondary'>
-                                    {phrases.get('components.pages.DevelopmentPage.data.production.description')}
-                                </Card.Text>
-
-                                <Button
-                                    variant='primary'
-                                    onClick={handleProductionFixtureImport}
-                                    disabled={loading}
-                                >
-                                    {loading ? (
-                                        <>
-                                            <Spinner size='sm' className='me-2' />
-                                            <span>{phrases.get('components.pages.DevelopmentPage.data.production.importing')}</span>
-                                        </>
-                                    ) : (
-                                        <>
-                                            <i className='bi bi-database-add me-2'></i>
-                                            <span>{phrases.get('components.pages.DevelopmentPage.data.production.button')}</span>
-                                        </>
-                                    )}
                                 </Button>
                             </Card.Body>
                         </Card>
