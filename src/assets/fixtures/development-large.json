@@ -39,6 +39,11 @@
     ],
     "workdays": [
         {
+            "organizer": "?",
+            "date": "2022-10-10",
+            "description": "Lunes Feriado"
+        },
+        {
             "organizer": "Feria Plaza Pringles",
             "date": "2022-10-16",
             "description": "Día de la Madre"
@@ -806,9 +811,1290 @@
         {
             "name": "Espejo Ojo",
             "description": ""
+        },
+        {
+            "name": "Lámpara",
+            "description": ""
+        },
+        {
+            "name": "Reloj",
+            "description": ""
         }
     ],
     "sales": [
+        {
+            "workday": {
+                "organizer": "?",
+                "date": "2022-07-31"
+            },
+            "product": "Imán",
+            "quantity": 5,
+            "totalPrice": 500,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "?",
+                "date": "2022-07-31"
+            },
+            "product": "Imán",
+            "quantity": 1,
+            "totalPrice": 100,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "?",
+                "date": "2022-07-31"
+            },
+            "product": "Porta Sahumerio Cuadrado",
+            "quantity": 1,
+            "totalPrice": 200,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "?",
+                "date": "2022-07-31"
+            },
+            "product": "Imán",
+            "quantity": 2,
+            "totalPrice": 200,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "?",
+                "date": "2022-07-31"
+            },
+            "product": "Llamador de Ángeles",
+            "quantity": 1,
+            "totalPrice": 1500,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "?",
+                "date": "2022-07-31"
+            },
+            "product": "Imán",
+            "quantity": 3,
+            "totalPrice": 300,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "?",
+                "date": "2022-07-31"
+            },
+            "product": "Imán",
+            "quantity": 1,
+            "totalPrice": 100,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "?",
+                "date": "2022-07-31"
+            },
+            "product": "Porta Sahumerio Cuadrado",
+            "quantity": 1,
+            "totalPrice": 200,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "?",
+                "date": "2022-07-31"
+            },
+            "product": "Imán",
+            "quantity": 2,
+            "totalPrice": 200,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "?",
+                "date": "2022-07-31"
+            },
+            "product": "Porta Sahumerio Cuadrado",
+            "quantity": 1,
+            "totalPrice": 200,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "?",
+                "date": "2022-07-31"
+            },
+            "product": "Caja Chica de Té",
+            "quantity": 1,
+            "totalPrice": 2100,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "?",
+                "date": "2022-07-31"
+            },
+            "product": "Cenicero",
+            "quantity": 1,
+            "totalPrice": 600,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "?",
+                "date": "2022-07-31"
+            },
+            "product": "Imán",
+            "quantity": 1,
+            "totalPrice": 100,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "?",
+                "date": "2022-07-31"
+            },
+            "product": "Porta Sahumerio Cuadrado",
+            "quantity": 1,
+            "totalPrice": 200,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "?",
+                "date": "2022-07-31"
+            },
+            "product": "Imán",
+            "quantity": 1,
+            "totalPrice": 100,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "?",
+                "date": "2022-07-31"
+            },
+            "product": "Porta Sahumerio Cuadrado",
+            "quantity": 1,
+            "totalPrice": 500,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "?",
+                "date": "2022-07-31"
+            },
+            "product": "Porta Sahumerio Cuadrado",
+            "quantity": 1,
+            "totalPrice": 200,
+            "note": ""
+        },
+
+        {
+            "workday": {
+                "organizer": "?",
+                "date": "2022-08-07"
+            },
+            "product": "Imán",
+            "quantity": 2,
+            "totalPrice": 200,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "?",
+                "date": "2022-08-07"
+            },
+            "product": "Imán",
+            "quantity": 1,
+            "totalPrice": 100,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "?",
+                "date": "2022-08-07"
+            },
+            "product": "Porta Sahumerio de Cerámica",
+            "quantity": 1,
+            "totalPrice": 700,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "?",
+                "date": "2022-08-07"
+            },
+            "product": "Porta Sahumerio Cuadrado",
+            "quantity": 1,
+            "totalPrice": 300,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "?",
+                "date": "2022-08-07"
+            },
+            "product": "Cenicero",
+            "quantity": 1,
+            "totalPrice": 600,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "?",
+                "date": "2022-08-07"
+            },
+            "product": "Llamador de Ángeles",
+            "quantity": 1,
+            "totalPrice": 1500,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "?",
+                "date": "2022-08-07"
+            },
+            "product": "Imán",
+            "quantity": 1,
+            "totalPrice": 100,
+            "note": ""
+        },
+
+        {
+            "workday": {
+                "organizer": "?",
+                "date": "2022-08-14"
+            },
+            "product": "Llamador de Ángeles",
+            "quantity": 1,
+            "totalPrice": 1500,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "?",
+                "date": "2022-08-14"
+            },
+            "product": "Imán",
+            "quantity": 3,
+            "totalPrice": 300,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "?",
+                "date": "2022-08-14"
+            },
+            "product": "Llamador de Ángeles",
+            "quantity": 1,
+            "totalPrice": 1500,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "?",
+                "date": "2022-08-14"
+            },
+            "product": "Imán",
+            "quantity": 1,
+            "totalPrice": 100,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "?",
+                "date": "2022-08-14"
+            },
+            "product": "Imán",
+            "quantity": 2,
+            "totalPrice": 200,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "?",
+                "date": "2022-08-14"
+            },
+            "product": "Imán",
+            "quantity": 1,
+            "totalPrice": 100,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "?",
+                "date": "2022-08-14"
+            },
+            "product": "Imán",
+            "quantity": 1,
+            "totalPrice": 100,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "?",
+                "date": "2022-08-14"
+            },
+            "product": "Cenicero",
+            "quantity": 2,
+            "totalPrice": 1200,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "?",
+                "date": "2022-08-14"
+            },
+            "product": "Imán",
+            "quantity": 2,
+            "totalPrice": 200,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "?",
+                "date": "2022-08-14"
+            },
+            "product": "Cenicero",
+            "quantity": 1,
+            "totalPrice": 600,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "?",
+                "date": "2022-08-14"
+            },
+            "product": "Porta Sahumerio Cuadrado",
+            "quantity": 1,
+            "totalPrice": 500,
+            "note": ""
+        },
+
+        {
+            "workday": {
+                "organizer": "?",
+                "date": "2022-08-21"
+            },
+            "product": "Porta Velas",
+            "quantity": 1,
+            "totalPrice": 500,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "?",
+                "date": "2022-08-21"
+            },
+            "product": "Imán",
+            "quantity": 2,
+            "totalPrice": 200,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "?",
+                "date": "2022-08-21"
+            },
+            "product": "Llamador de Ángeles",
+            "quantity": 1,
+            "totalPrice": 1500,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "?",
+                "date": "2022-08-21"
+            },
+            "product": "Imán",
+            "quantity": 2,
+            "totalPrice": 200,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "?",
+                "date": "2022-08-21"
+            },
+            "product": "Imán",
+            "quantity": 4,
+            "totalPrice": 400,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "?",
+                "date": "2022-08-21"
+            },
+            "product": "Porta Sahumerio Cuadrado",
+            "quantity": 1,
+            "totalPrice": 500,
+            "note": ""
+        },
+
+        {
+            "workday": {
+                "organizer": "?",
+                "date": "2022-08-28"
+            },
+            "product": "Llamador de Ángeles",
+            "quantity": 1,
+            "totalPrice": 1500,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "?",
+                "date": "2022-08-28"
+            },
+            "product": "Colibrí",
+            "quantity": 1,
+            "totalPrice": 1500,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "?",
+                "date": "2022-08-28"
+            },
+            "product": "Porta Velas",
+            "quantity": 1,
+            "totalPrice": 500,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "?",
+                "date": "2022-08-28"
+            },
+            "product": "Porta Sahumerio Cuadrado",
+            "quantity": 1,
+            "totalPrice": 300,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "?",
+                "date": "2022-08-28"
+            },
+            "product": "Llamador de Ángeles",
+            "quantity": 1,
+            "totalPrice": 1500,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "?",
+                "date": "2022-08-28"
+            },
+            "product": "Imán",
+            "quantity": 1,
+            "totalPrice": 100,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "?",
+                "date": "2022-08-28"
+            },
+            "product": "Llamador de Ángeles",
+            "quantity": 1,
+            "totalPrice": 1500,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "?",
+                "date": "2022-08-28"
+            },
+            "product": "Hornito",
+            "quantity": 1,
+            "totalPrice": 1300,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "?",
+                "date": "2022-08-28"
+            },
+            "product": "Porta Sahumerio Cuadrado",
+            "quantity": 1,
+            "totalPrice": 500,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "?",
+                "date": "2022-08-28"
+            },
+            "product": "Ojo Grande",
+            "quantity": 1,
+            "totalPrice": 3500,
+            "note": ""
+        },
+
+        {
+            "workday": {
+                "organizer": "?",
+                "date": "2022-09-04"
+            },
+            "product": "Porta Rollo",
+            "quantity": 1,
+            "totalPrice": 1800,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "?",
+                "date": "2022-09-04"
+            },
+            "product": "Almanaque",
+            "quantity": 1,
+            "totalPrice": 200,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "?",
+                "date": "2022-09-04"
+            },
+            "product": "Porta Sahumerio Cuadrado",
+            "quantity": 1,
+            "totalPrice": 500,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "?",
+                "date": "2022-09-04"
+            },
+            "product": "Porta Sahumerio de Cerámica",
+            "quantity": 1,
+            "totalPrice": 700,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "?",
+                "date": "2022-09-04"
+            },
+            "product": "Almanaque",
+            "quantity": 1,
+            "totalPrice": 200,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "?",
+                "date": "2022-09-04"
+            },
+            "product": "Porta Sahumerio de Cerámica",
+            "quantity": 1,
+            "totalPrice": 700,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "?",
+                "date": "2022-09-04"
+            },
+            "product": "Porta Sahumerio Cuadrado",
+            "quantity": 1,
+            "totalPrice": 300,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "?",
+                "date": "2022-09-04"
+            },
+            "product": "Cenicero",
+            "quantity": 1,
+            "totalPrice": 600,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "?",
+                "date": "2022-09-04"
+            },
+            "product": "Porta Sahumerio Cuadrado",
+            "quantity": 1,
+            "totalPrice": 500,
+            "note": ""
+        },
+
+        {
+            "workday": {
+                "organizer": "Feria de Peatonales",
+                "date": "2022-09-10"
+            },
+            "product": "Llamador de Ángeles",
+            "quantity": 1,
+            "totalPrice": 1500,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "Feria de Peatonales",
+                "date": "2022-09-10"
+            },
+            "product": "Llamador de Ángeles",
+            "quantity": 1,
+            "totalPrice": 1500,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "Feria de Peatonales",
+                "date": "2022-09-10"
+            },
+            "product": "Porta Velas",
+            "quantity": 1,
+            "totalPrice": 500,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "Feria de Peatonales",
+                "date": "2022-09-10"
+            },
+            "product": "Llamador de Ángeles",
+            "quantity": 1,
+            "totalPrice": 1500,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "Feria de Peatonales",
+                "date": "2022-09-10"
+            },
+            "product": "Reloj",
+            "quantity": 1,
+            "totalPrice": 3500,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "Feria de Peatonales",
+                "date": "2022-09-10"
+            },
+            "product": "Porta Sahumerio Cuadrado",
+            "quantity": 1,
+            "totalPrice": 300,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "Feria de Peatonales",
+                "date": "2022-09-10"
+            },
+            "product": "Porta Sahumerio Cuadrado",
+            "quantity": 1,
+            "totalPrice": 300,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "Feria de Peatonales",
+                "date": "2022-09-10"
+            },
+            "product": "Lámpara de Espejos",
+            "quantity": 1,
+            "totalPrice": 3500,
+            "note": ""
+        },
+
+        {
+            "workday": {
+                "organizer": "Feria de Peatonales",
+                "date": "2022-09-11"
+            },
+            "product": "Almanaque",
+            "quantity": 3,
+            "totalPrice": 600,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "Feria de Peatonales",
+                "date": "2022-09-11"
+            },
+            "product": "Almanaque",
+            "quantity": 3,
+            "totalPrice": 600,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "Feria de Peatonales",
+                "date": "2022-09-11"
+            },
+            "product": "Porta Sahumerio Cuadrado",
+            "quantity": 1,
+            "totalPrice": 300,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "Feria de Peatonales",
+                "date": "2022-09-11"
+            },
+            "product": "Porta Sahumerio Cuadrado",
+            "quantity": 1,
+            "totalPrice": 300,
+            "note": ""
+        },
+
+        {
+            "workday": {
+                "organizer": "?",
+                "date": "2022-09-18"
+            },
+            "product": "Imán",
+            "quantity": 2,
+            "totalPrice": 400,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "?",
+                "date": "2022-09-18"
+            },
+            "product": "Llamador de Ángeles",
+            "quantity": 1,
+            "totalPrice": 1500,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "?",
+                "date": "2022-09-18"
+            },
+            "product": "Lámpara",
+            "quantity": 1,
+            "totalPrice": 4000,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "?",
+                "date": "2022-09-18"
+            },
+            "product": "Reloj de Espejos",
+            "quantity": 1,
+            "totalPrice": 4000,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "?",
+                "date": "2022-09-18"
+            },
+            "product": "Imán",
+            "quantity": 2,
+            "totalPrice": 400,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "?",
+                "date": "2022-09-18"
+            },
+            "product": "Imán",
+            "quantity": 2,
+            "totalPrice": 400,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "?",
+                "date": "2022-09-18"
+            },
+            "product": "Imán",
+            "quantity": 1,
+            "totalPrice": 200,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "?",
+                "date": "2022-09-18"
+            },
+            "product": "Porta Sahumerio Cuadrado",
+            "quantity": 1,
+            "totalPrice": 300,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "?",
+                "date": "2022-09-18"
+            },
+            "product": "Porta Sahumerio Cuadrado",
+            "quantity": 1,
+            "totalPrice": 500,
+            "note": ""
+        },
+
+        {
+            "workday": {
+                "organizer": "?",
+                "date": "2022-09-25"
+            },
+            "product": "Almanaque",
+            "quantity": 2,
+            "totalPrice": 400,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "?",
+                "date": "2022-09-25"
+            },
+            "product": "Llamador de Ángeles",
+            "quantity": 1,
+            "totalPrice": 1500,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "?",
+                "date": "2022-09-25"
+            },
+            "product": "Cenicero",
+            "quantity": 1,
+            "totalPrice": 900,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "?",
+                "date": "2022-09-25"
+            },
+            "product": "Porta Sahumerio Cuadrado",
+            "quantity": 1,
+            "totalPrice": 300,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "?",
+                "date": "2022-09-25"
+            },
+            "product": "Ojo Grande",
+            "quantity": 1,
+            "totalPrice": 3600,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "?",
+                "date": "2022-09-25"
+            },
+            "product": "Almanaque",
+            "quantity": 1,
+            "totalPrice": 200,
+            "note": "MP"
+        },
+        {
+            "workday": {
+                "organizer": "?",
+                "date": "2022-09-25"
+            },
+            "product": "Porta Sahumerio de Cerámica",
+            "quantity": 1,
+            "totalPrice": 700,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "?",
+                "date": "2022-09-25"
+            },
+            "product": "Porta Sahumerio Cuadrado",
+            "quantity": 1,
+            "totalPrice": 500,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "?",
+                "date": "2022-09-25"
+            },
+            "product": "Maceta Chica",
+            "quantity": 1,
+            "totalPrice": 600,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "?",
+                "date": "2022-09-25"
+            },
+            "product": "Almanaque",
+            "quantity": 3,
+            "totalPrice": 600,
+            "note": ""
+        },
+
+        {
+            "workday": {
+                "organizer": "?",
+                "date": "2022-10-02"
+            },
+            "product": "Porta Sahumerio de Cerámica",
+            "quantity": 1,
+            "totalPrice": 700,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "?",
+                "date": "2022-10-02"
+            },
+            "product": "Porta Sahumerio de Cerámica",
+            "quantity": 1,
+            "totalPrice": 700,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "?",
+                "date": "2022-10-02"
+            },
+            "product": "Porta Sahumerio de Cerámica",
+            "quantity": 1,
+            "totalPrice": 700,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "?",
+                "date": "2022-10-02"
+            },
+            "product": "Porta Sahumerio de Cerámica",
+            "quantity": 1,
+            "totalPrice": 700,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "?",
+                "date": "2022-10-02"
+            },
+            "product": "Porta Sahumerio de Cerámica",
+            "quantity": 1,
+            "totalPrice": 700,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "?",
+                "date": "2022-10-02"
+            },
+            "product": "Almanaque",
+            "quantity": 1,
+            "totalPrice": 200,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "?",
+                "date": "2022-10-02"
+            },
+            "product": "Almanaque",
+            "quantity": 1,
+            "totalPrice": 200,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "?",
+                "date": "2022-10-02"
+            },
+            "product": "Almanaque",
+            "quantity": 1,
+            "totalPrice": 200,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "?",
+                "date": "2022-10-02"
+            },
+            "product": "Hornito",
+            "quantity": 1,
+            "totalPrice": 1300,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "?",
+                "date": "2022-10-02"
+            },
+            "product": "Hornito",
+            "quantity": 1,
+            "totalPrice": 1300,
+            "note": ""
+        },
+
+        {
+            "workday": {
+                "organizer": "?",
+                "date": "2022-10-09"
+            },
+            "product": "Porta Sahumerio de Cerámica",
+            "quantity": 1,
+            "totalPrice": 700,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "?",
+                "date": "2022-10-09"
+            },
+            "product": "Ojo Grande",
+            "quantity": 1,
+            "totalPrice": 3900,
+            "note": "MP"
+        },
+        {
+            "workday": {
+                "organizer": "?",
+                "date": "2022-10-09"
+            },
+            "product": "Almanaque",
+            "quantity": 1,
+            "totalPrice": 200,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "?",
+                "date": "2022-10-09"
+            },
+            "product": "Caja Porta Sahumerios",
+            "quantity": 1,
+            "totalPrice": 1800,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "?",
+                "date": "2022-10-09"
+            },
+            "product": "Almanaque",
+            "quantity": 1,
+            "totalPrice": 200,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "?",
+                "date": "2022-10-09"
+            },
+            "product": "Almanaque",
+            "quantity": 2,
+            "totalPrice": 400,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "?",
+                "date": "2022-10-09"
+            },
+            "product": "Llamador de Ángeles",
+            "quantity": 1,
+            "totalPrice": 1500,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "?",
+                "date": "2022-10-09"
+            },
+            "product": "Porta Sahumerio Cuadrado",
+            "quantity": 1,
+            "totalPrice": 500,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "?",
+                "date": "2022-10-09"
+            },
+            "product": "Hornito",
+            "quantity": 1,
+            "totalPrice": 1300,
+            "note": ""
+        },
+
+        {
+            "workday": {
+                "organizer": "?",
+                "date": "2022-10-10"
+            },
+            "product": "Llamador de Ángeles",
+            "quantity": 1,
+            "totalPrice": 1500,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "?",
+                "date": "2022-10-10"
+            },
+            "product": "Almanaque",
+            "quantity": 5,
+            "totalPrice": 1000,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "?",
+                "date": "2022-10-10"
+            },
+            "product": "Porta Sahumerio Cuadrado",
+            "quantity": 2,
+            "totalPrice": 600,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "?",
+                "date": "2022-10-10"
+            },
+            "product": "Llamador de Ángeles",
+            "quantity": 1,
+            "totalPrice": 1500,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "?",
+                "date": "2022-10-10"
+            },
+            "product": "Almanaque",
+            "quantity": 1,
+            "totalPrice": 200,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "?",
+                "date": "2022-10-10"
+            },
+            "product": "Porta Rollo",
+            "quantity": 1,
+            "totalPrice": 1900,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "?",
+                "date": "2022-10-10"
+            },
+            "product": "Almanaque",
+            "quantity": 1,
+            "totalPrice": 200,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "?",
+                "date": "2022-10-10"
+            },
+            "product": "Llamador de Ángeles",
+            "quantity": 1,
+            "totalPrice": 1500,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "?",
+                "date": "2022-10-10"
+            },
+            "product": "Porta Sahumerio Cuadrado",
+            "quantity": 1,
+            "totalPrice": 300,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "?",
+                "date": "2022-10-10"
+            },
+            "product": "Cenicero",
+            "quantity": 1,
+            "totalPrice": 900,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "?",
+                "date": "2022-10-10"
+            },
+            "product": "Llamador de Ángeles",
+            "quantity": 1,
+            "totalPrice": 1500,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "?",
+                "date": "2022-10-10"
+            },
+            "product": "Llamador de Ángeles",
+            "quantity": 1,
+            "totalPrice": 1500,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "?",
+                "date": "2022-10-10"
+            },
+            "product": "Ojo",
+            "quantity": 1,
+            "totalPrice": 1200,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "?",
+                "date": "2022-10-10"
+            },
+            "product": "Porta Sahumerio Cuadrado",
+            "quantity": 1,
+            "totalPrice": 300,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "?",
+                "date": "2022-10-10"
+            },
+            "product": "Porta Sahumerio Cuadrado",
+            "quantity": 1,
+            "totalPrice": 300,
+            "note": ""
+        },
+        {
+            "workday": {
+                "organizer": "?",
+                "date": "2022-10-10"
+            },
+            "product": "Porta Sahumerio Cuadrado",
+            "quantity": 1,
+            "totalPrice": 300,
+            "note": ""
+        },
+
         {
             "workday": {
                 "organizer": "Feria Plaza Pringles",
