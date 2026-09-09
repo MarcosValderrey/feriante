@@ -8,6 +8,7 @@ import Row from 'react-bootstrap/Row';
 import Spinner from 'react-bootstrap/Spinner';
 import Table from 'react-bootstrap/Table';
 
+import { useSettings } from '../../context/SettingsContext.jsx';
 import PageHeader from '../common/PageHeader.jsx';
 import { getSummary } from '../../services/insights.js';
 import Formats from '../../utils/Formats.jsx';
@@ -15,6 +16,8 @@ import phrases from '../../utils/Phrases.jsx';
 
 
 function SummaryPage() {
+    const { settings, setSettings } = useSettings();
+
     const [summary, setSummary] = useState(null);
     const [loading, setLoading] = useState(true);
 
@@ -25,6 +28,16 @@ function SummaryPage() {
     async function loadSummary() {
         try {
             const result = await getSummary();
+            const top = settings.top.value;
+
+            // Reduce all lists a to fixed amount of displayable items
+            result.productsByQuantity = result.productsByQuantity.slice(0, top);
+            result.productsByRevenue = result.productsByRevenue.slice(0, top);
+            result.organizersByQuantity = result.organizersByQuantity.slice(0, top);
+            result.organizersByRevenue = result.organizersByRevenue.slice(0, top);
+            result.workdaysByQuantity = result.workdaysByQuantity.slice(0, top);
+            result.workdaysByRevenue = result.workdaysByRevenue.slice(0, top);
+
             setSummary(result);
         } catch (error) {
             console.error(error);
@@ -269,7 +282,7 @@ function ProductSummary({ summary }) {
                 <RankingCard
                     title={phrases.get('components.pages.SummaryPage.products.byQuantity')}
                     icon='box-seam'
-                    items={summary.productsByQuantity.slice(0, 10)}
+                    items={summary.productsByQuantity}
                     valueKey='quantity'
                     formatValue={asQuantity}
                 />
@@ -277,7 +290,7 @@ function ProductSummary({ summary }) {
                 <RankingCard
                     title={phrases.get('components.pages.SummaryPage.products.byRevenue')}
                     icon='cash-coin'
-                    items={summary.productsByRevenue.slice(0, 10)}
+                    items={summary.productsByRevenue}
                     valueKey='revenue'
                     formatValue={Formats.asMoney}
                 />
@@ -296,7 +309,7 @@ function OrganizerSummary({ summary }) {
                 <RankingCard
                     title={phrases.get('components.pages.SummaryPage.organizers.byQuantity')}
                     icon='box-seam'
-                    items={summary.organizersByQuantity.slice(0, 10)}
+                    items={summary.organizersByQuantity}
                     valueKey='quantity'
                     formatValue={asQuantity}
                 />
@@ -304,7 +317,7 @@ function OrganizerSummary({ summary }) {
                 <RankingCard
                     title={phrases.get('components.pages.SummaryPage.organizers.byRevenue')}
                     icon='cash-coin'
-                    items={summary.organizersByRevenue.slice(0, 10)}
+                    items={summary.organizersByRevenue}
                     valueKey='revenue'
                     formatValue={Formats.asMoney}
                 />
@@ -323,7 +336,7 @@ function WorkdaySummary({ summary }) {
                 <RankingCard
                     title={phrases.get('components.pages.SummaryPage.workdays.byQuantity')}
                     icon='box-seam'
-                    items={summary.workdaysByQuantity.slice(0, 10)}
+                    items={summary.workdaysByQuantity}
                     valueKey='quantity'
                     formatValue={asQuantity}
                     formatItem={Formats.asWorkday}
@@ -332,7 +345,7 @@ function WorkdaySummary({ summary }) {
                 <RankingCard
                     title={phrases.get('components.pages.SummaryPage.workdays.byRevenue')}
                     icon='cash-coin'
-                    items={summary.workdaysByRevenue.slice(0, 10)}
+                    items={summary.workdaysByRevenue}
                     valueKey='revenue'
                     formatValue={Formats.asMoney}
                     formatItem={Formats.asWorkday}
@@ -366,7 +379,7 @@ function RankingCard({
                         </div>
                     ) : (
                         <Table responsive hover size='sm' className='mb-0 small'>
-                            <tbody className='table-group-divider'>
+                            <tbody>
                                 {items.map(function(item, index) {
                                     return (
                                         <tr key={index + 1}>

@@ -51,7 +51,8 @@ class Settings {
      */
     constructor() {
         this.language = new Setting(1, 'language', 'models.Settings.language', navigator.language);
-        this.lastUpdate = new Setting(2, 'lastUpdate', 'models.Settings.lastUpdate', new Date());
+        this.top = new Setting(2, 'top', 'models.Settings.top', 10);
+        this.lastUpdate = new Setting(3, 'lastUpdate', 'models.Settings.lastUpdate', new Date());
     }
 
     /**
