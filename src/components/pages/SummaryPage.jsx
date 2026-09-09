@@ -108,6 +108,24 @@ function HeadlineStats({ summary }) {
                 value={summary.totalOrganizers}
                 label={phrases.get('components.pages.SummaryPage.headlines.totalOrganizers')}
             />
+
+            <StatCard
+                icon='box-seam'
+                value={summary.totalSales}
+                label={phrases.get('components.pages.SummaryPage.headlines.totalSales')}
+            />
+
+            <StatCard
+                icon='cash'
+                value={Formats.asPercentage(summary.cashSalesPercentage)}
+                label={phrases.get('components.pages.SummaryPage.headlines.cashSalesPercentage')}
+            />
+
+            <StatCard
+                icon='phone'
+                value={Formats.asPercentage(summary.walletSalesPercentage)}
+                label={phrases.get('components.pages.SummaryPage.headlines.walletSalesPercentage')}
+            />
         </Row>
     );
 }
@@ -352,11 +370,10 @@ function RankingCard({
                                 {items.map(function(item, index) {
                                     return (
                                         <tr key={index + 1}>
-                                            <td className='col-1 text-end text-body-secondary'>
-                                                {index === 0 && (
-                                                    <i className='bi bi-star-fill text-warning me-2'></i>
+                                            <td className='col-1 text-center text-primary'>
+                                                {getRankIcon(index) && (
+                                                    <i className={`bi ${getRankIcon(index)}`}></i>
                                                 )}
-                                                <span>{index + 1}</span>
                                             </td>
                                             <td>
                                                 {formatItem
@@ -387,6 +404,23 @@ function EmptySummary() {
             </div>
         </Container>
     );
+}
+
+
+function getRankIcon(index) {
+    if (index === 0) {
+        return 'bi-trophy-fill text-warning';
+    }
+
+    if (index === 1) {
+        return 'bi-award-fill';
+    }
+
+    if (index === 2) {
+        return 'bi-award';
+    }
+
+    return null;
 }
 
 

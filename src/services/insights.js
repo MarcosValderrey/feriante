@@ -55,6 +55,12 @@ async function getSummary() {
     let biggestSale = null;
     let biggestRevenueSale = null;
 
+    let totalSales = sales.length;
+    let walletSalesQuantity = 0;
+    let walletSalesPercentage = 0.0;
+    let cashSalesQuantity = 0;
+    let cashSalesPercentage = 0.0;
+
     for (const sale of sales) {
         const product = productMap.get(sale.productId);
         const workday = workdayMap.get(sale.workdayId);
@@ -92,8 +98,7 @@ async function getSummary() {
         if (!organizerSalesMap.has(organizerId)) {
             organizerSalesMap.set(organizerId, {
                 organizerId: organizerId,
-                organizerName: organizer?.name
-                    ?? "Organizador eliminado",
+                organizerName: organizer?.name ?? 'Organizador eliminado',
                 organizerDescription: organizer?.description,
                 quantity: 0,
                 revenue: 0
@@ -114,7 +119,7 @@ async function getSummary() {
                 date: workday.date,
                 description: workday.description,
                 organizerId: organizerId,
-                organizerName: organizer?.name ?? "Organizador eliminado",
+                organizerName: organizer?.name ?? 'Organizador eliminado',
                 organizerDescription: organizer?.description,
                 quantity: 0,
                 revenue: 0
@@ -142,7 +147,7 @@ async function getSummary() {
                 workdayId: workday.id,
                 date: workday.date,
                 organizerId: organizerId,
-                organizerName: organizer?.name ?? "Organizador eliminado",
+                organizerName: organizer?.name ?? 'Organizador eliminado',
                 organizerDescription: organizer?.description
             };
         }
@@ -160,11 +165,21 @@ async function getSummary() {
                 workdayId: workday.id,
                 date: workday.date,
                 organizerId: organizerId,
-                organizerName: organizer?.name ?? "Organizador eliminado",
+                organizerName: organizer?.name ?? 'Organizador eliminado',
                 organizerDescription: organizer?.description
             };
         }
+
+        // Wallet or cash sale?
+        if (sale.note?.trim().toUpperCase() === 'MP') {
+            walletSalesQuantity++;
+        } else {
+            cashSalesQuantity++;
+        }
     }
+
+    walletSalesPercentage = totalSales ? (walletSalesQuantity / totalSales) * 100.0 : 0.0;
+    cashSalesPercentage = totalSales ? (cashSalesQuantity / totalSales) * 100.0 : 0.0;
 
     // Get oldest and newest workdays
     for (const workday of workdays) {
@@ -213,6 +228,12 @@ async function getSummary() {
         totalProducts,
         totalWorkdays,
         totalOrganizers,
+
+        totalSales,
+        cashSalesQuantity,
+        cashSalesPercentage,
+        walletSalesQuantity,
+        walletSalesPercentage,
 
         oldestWorkday,
         newestWorkday,
