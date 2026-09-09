@@ -1,10 +1,10 @@
-import { Container } from 'react-bootstrap';
+import Container from 'react-bootstrap/Container';
 
 
 function PageHeader({ title, subtitle, icon }) {
     return (
         <Container fluid className='py-4'>
-            <div className="d-flex align-items-center">
+            <div className='d-flex justify-content-center justify-content-md-start align-items-center'>
                 <i className={`bi bi-${icon} fs-1 text-primary me-3`}></i>
 
                 <div>

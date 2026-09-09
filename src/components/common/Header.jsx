@@ -14,7 +14,7 @@ function Header() {
                 <Navbar.Brand href='/' className='d-flex align-items-center gap-2'>
                     <img src='images/icons/shop-32x32.png' alt='Feriante Logo' width={32} height={32} className='d-inline-block' />
                     <span className='align-middle fw-bold text-secondary'>Feriante</span>
-                    <span className='badge rounded-pill text-bg-primary' id='feriante-version'>0.1.0</span>
+                    <span className='badge rounded-pill text-bg-primary'>{__APP_VERSION__}</span>
                 </Navbar.Brand>
 
                 <Navbar.Toggle aria-controls='feriante-navbar-nav'></Navbar.Toggle>

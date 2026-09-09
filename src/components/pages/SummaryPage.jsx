@@ -381,7 +381,7 @@ function RankingCard({
                                                     : item.productName
                                                         ?? item.organizerName}
                                             </td>
-                                            <td className='text-end fw-semibold'>{formatValue(item[valueKey])}</td>
+                                            <td className='text-end text-nowrap fw-semibold'>{formatValue(item[valueKey])}</td>
                                         </tr>
                                     );
                                 })}
