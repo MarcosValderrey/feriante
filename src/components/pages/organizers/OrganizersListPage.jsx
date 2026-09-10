@@ -11,30 +11,31 @@ import Table from 'react-bootstrap/Table';
 import { useNavigate } from 'react-router-dom';
 
 import PageHeader from '../../common/PageHeader';
-import { deleteProduct, getProducts } from '../../../services/products';
-import { getSalesByProductId } from '../../../services/sales';
+import { deleteOrganizer } from '../../../services/organizers';
+import { getOrganizers } from '../../../services/organizers';
+import { getWorkdaysByOrganizerId } from '../../../services/workdays';
 import phrases from '../../../utils/Phrases';
 
 
-function ProductsListPage() {
+function OrganizersListPage() {
     const navigate = useNavigate();
 
-    const [products, setProducts] = useState([]);
+    const [organizers, setOrganizers] = useState([]);
     const [loading, setLoading] = useState(true);
-
-    const [productToDelete, setProductToDelete] = useState(null);
-    const [productDeleteBlocked, setProductDeleteBlocked] = useState(null);
+    const [organizerToDelete, setOrganizerToDelete] = useState(null);
+    const [organizerDeleteBlocked, setOrganizerDeleteBlocked] = useState(null);
     const [deleting, setDeleting] = useState(false);
+    const [deleteError, setDeleteError] = useState(null);
 
-    function loadProducts() {
+    function loadOrganizers() {
         setLoading(true);
 
-        getProducts()
+        getOrganizers()
             .then(function(result) {
-                setProducts(result);
+                setOrganizers(result);
             })
             .catch(function(error) {
-                console.error('Failed to load products:', error);
+                console.error('Failed to load organizers:', error);
             })
             .finally(function() {
                 setLoading(false);
@@ -42,45 +43,46 @@ function ProductsListPage() {
     }
 
     useEffect(function() {
-        loadProducts();
+        loadOrganizers();
     }, []);
 
-    function handleDeleteRequest(product) {
-        setProductDeleteBlocked(null);
-        setProductToDelete(product);
+    function handleDeleteRequest(organizer) {
+        setDeleteError(null);
+        setOrganizerDeleteBlocked(null);
+        setOrganizerToDelete(organizer);
     }
 
     function handleDeleteCancel() {
-        if (deleting) {
-            return;
+        if (!deleting) {
+            setOrganizerToDelete(null);
+            setDeleteError(null);
         }
-
-        setProductToDelete(null);
     }
 
     function handleDeleteBlockedClose() {
-        setProductDeleteBlocked(null);
+        setOrganizerDeleteBlocked(null);
     }
 
-    async function handleDeleteConfirm() {
+    async function handleDelete() {
         setDeleting(true);
-        setProductDeleteBlocked(null);
+        setDeleteError(null);
 
         try {
-            const sales = await getSalesByProductId(productToDelete.id);
+            const workdays = await getWorkdaysByOrganizerId(organizerToDelete.id);
 
-            if (sales.length > 0) {
-                setProductToDelete(null);
-                setProductDeleteBlocked(productToDelete);
+            if (workdays.length > 0) {
+                setOrganizerToDelete(null);
+                setOrganizerDeleteBlocked(organizerToDelete);
                 return;
             }
 
-            await deleteProduct(productToDelete.id);
+            await deleteOrganizer(organizerToDelete.id);
 
-            setProductToDelete(null);
-            loadProducts();
+            setOrganizerToDelete(null);
+            loadOrganizers();
         } catch (error) {
-            console.error('Failed to delete product:', error);
+            console.error('Failed to delete organizer:', error);
+            setDeleteError(phrases.get('components.pages.OrganizersListPage.delete.fail'));
         } finally {
             setDeleting(false);
         }
@@ -91,37 +93,39 @@ function ProductsListPage() {
             <Button
                 variant='primary'
                 onClick={function() {
-                    navigate(phrases.get('App.paths.products.new'));
+                    navigate(phrases.get('App.paths.organizers.new'));
                 }}>
                 <i className='bi bi-plus-lg me-1'></i>
-                <span>{phrases.get('components.pages.ProductsListPage.new')}</span>
+                <span>{phrases.get('components.pages.OrganizersListPage.new')}</span>
             </Button>
         );
     }
 
-    function EditButton({ productId }) {
+    function EditButton({ organizerId }) {
         return (
             <Button
                 variant='outline-secondary'
                 size='sm'
                 className='me-1'
-                title={phrases.get('components.pages.ProductsListPage.edit.tooltip')}
+                title={phrases.get('components.pages.OrganizersListPage.edit.tooltip')}
                 onClick={function() {
-                    navigate(`${phrases.get('App.paths.products.edit')}${productId}`);
+                    navigate(
+                        `${phrases.get('App.paths.organizers.edit')}${organizerId}`
+                    );
                 }}>
                 <i className='bi bi-pencil'></i>
             </Button>
         );
     }
 
-    function DeleteButton({ product }) {
+    function DeleteButton({ organizer }) {
         return (
             <Button
                 variant='outline-danger'
                 size='sm'
-                title={phrases.get('components.pages.ProductsListPage.delete.tooltip')}
+                title={phrases.get('components.pages.OrganizersListPage.delete.tooltip')}
                 onClick={function() {
-                    handleDeleteRequest(product);
+                    handleDeleteRequest(organizer);
                 }}>
                 <i className='bi bi-trash'></i>
             </Button>
@@ -131,10 +135,11 @@ function ProductsListPage() {
     function Header() {
         return (
             <PageHeader
-                icon='box-seam'
-                title={phrases.get('components.pages.ProductsListPage.title')}
-                subtitle={phrases.get('components.pages.ProductsListPage.subtitle')}
-                action={<AddButton />} />
+                icon='shop'
+                title={phrases.get('components.pages.OrganizersListPage.title')}
+                subtitle={phrases.get('components.pages.OrganizersListPage.subtitle')}
+                action={<AddButton />}
+            />
         );
     }
 
@@ -149,44 +154,48 @@ function ProductsListPage() {
     function Empty() {
         return (
             <div className='text-center text-body-secondary py-5'>
-                <i className='bi bi-box-seam fs-1 d-block mb-3'></i>
-                <span>{phrases.get('components.pages.ProductsListPage.empty')}</span>
+                <i className='bi bi-shop fs-1 d-block mb-3'></i>
+                <span>
+                    {phrases.get('components.pages.OrganizersListPage.empty')}
+                </span>
             </div>
         );
     }
 
-    function ProductsTable() {
+    function OrganizersTable() {
         return (
             <Table responsive hover size='sm' className='mb-4 small'>
                 <thead>
                     <tr>
                         <th scope='col' className='col-6'>
-                            {phrases.get('components.pages.ProductsListPage.table.name')}
+                            {phrases.get(
+                                'components.pages.OrganizersListPage.table.name'
+                            )}
                         </th>
 
-                        <th scope='col' className='col-4'>
-                            {phrases.get('components.pages.ProductsListPage.table.description')}
+                        <th scope='col' className='col-5'>
+                            {phrases.get(
+                                'components.pages.OrganizersListPage.table.description'
+                            )}
                         </th>
 
-                        <th scope='col' className='col-2 text-end'>
-                            {phrases.get('components.pages.ProductsListPage.table.actions')}
-                        </th>
+                        <th scope='col' className='col-1'></th>
                     </tr>
                 </thead>
 
                 <tbody className='table-group-divider'>
-                    {products.map(function(product) {
+                    {organizers.map(function(organizer) {
                         return (
-                            <tr key={product.id} className='align-middle'>
-                                <td>{product.name}</td>
+                            <tr key={organizer.id} className='align-middle'>
+                                <td>{organizer.name}</td>
 
                                 <td className='text-body-secondary'>
-                                    {product.description || '—'}
+                                    {organizer.description || '—'}
                                 </td>
 
                                 <td className='text-end text-nowrap'>
-                                    <EditButton productId={product.id} />
-                                    <DeleteButton product={product} />
+                                    <EditButton organizerId={organizer.id} />
+                                    <DeleteButton organizer={organizer} />
                                 </td>
                             </tr>
                         );
@@ -197,15 +206,15 @@ function ProductsListPage() {
     }
 
     function DeleteConfirmationModal() {
-        if (!productToDelete) {
+        if (!organizerToDelete) {
             return null;
         }
 
         var buttonText = null;
         if (deleting) {
-            buttonText = phrases.get('components.pages.ProductsListPage.delete.popup.processing');
+            buttonText = phrases.get('components.pages.OrganizersListPage.delete.popup.processing');
         } else {
-            buttonText = phrases.get('components.pages.ProductsListPage.delete.popup.confirm');
+            buttonText = phrases.get('components.pages.OrganizersListPage.delete.popup.confirm');
         }
 
         return (
@@ -216,13 +225,19 @@ function ProductsListPage() {
 
                 <Modal.Header closeButton>
                     <Modal.Title>
-                        {phrases.get('components.pages.ProductsListPage.delete.popup.title')}
+                        {phrases.get('components.pages.OrganizersListPage.delete.popup.title')}
                     </Modal.Title>
                 </Modal.Header>
 
                 <Modal.Body>
-                    <span>{phrases.get('components.pages.ProductsListPage.delete.popup.question')}</span>{' '}
-                    <strong>{productToDelete.name}</strong>?
+                    <p>
+                        {phrases.get('components.pages.OrganizersListPage.delete.popup.question')}{' '}
+                        <strong>{organizerToDelete.name}</strong>?
+                    </p>
+
+                    {deleteError && (
+                        <div className='alert alert-danger mb-0'>{deleteError}</div>
+                    )}
                 </Modal.Body>
 
                 <Modal.Footer>
@@ -230,12 +245,12 @@ function ProductsListPage() {
                         variant='secondary'
                         onClick={handleDeleteCancel}
                         disabled={deleting}>
-                        {phrases.get('components.pages.ProductsListPage.delete.popup.cancel')}
+                        {phrases.get('components.pages.OrganizersListPage.delete.popup.cancel')}
                     </Button>
 
                     <Button
                         variant='danger'
-                        onClick={handleDeleteConfirm}
+                        onClick={handleDelete}
                         disabled={deleting}>
                         {buttonText}
                     </Button>
@@ -245,7 +260,7 @@ function ProductsListPage() {
     }
 
     function DeleteBlockedModal() {
-        if (!productDeleteBlocked) {
+        if (!organizerDeleteBlocked) {
             return null;
         }
 
@@ -257,21 +272,23 @@ function ProductsListPage() {
 
                 <Modal.Header closeButton>
                     <Modal.Title>
-                        {phrases.get('components.pages.ProductsListPage.delete.blocked.title')}
+                        {phrases.get('components.pages.OrganizersListPage.delete.blocked.title')}
                     </Modal.Title>
                 </Modal.Header>
 
                 <Modal.Body>
-                    {phrases.get('components.pages.ProductsListPage.delete.blocked.subtitle.1')}{' '}
-                    <strong>{productDeleteBlocked.name}</strong>{' '}
-                    {phrases.get('components.pages.ProductsListPage.delete.blocked.subtitle.2')}
+                    <p className='mb-0'>
+                        {phrases.get('components.pages.OrganizersListPage.delete.blocked.subtitle.1')}{' '}
+                        <strong>{organizerDeleteBlocked.name}</strong>{' '}
+                        {phrases.get('components.pages.OrganizersListPage.delete.blocked.subtitle.2')}
+                    </p>
                 </Modal.Body>
 
                 <Modal.Footer>
                     <Button
                         variant='secondary'
                         onClick={handleDeleteBlockedClose}>
-                        {phrases.get('components.pages.ProductsListPage.delete.blocked.close')}
+                        {phrases.get('components.pages.OrganizersListPage.delete.blocked.close')}
                     </Button>
                 </Modal.Footer>
             </Modal>
@@ -279,9 +296,8 @@ function ProductsListPage() {
     }
 
     var table = null;
-
-    if (products && products.length > 0) {
-        table = <ProductsTable />;
+    if (organizers && organizers.length > 0) {
+        table = <OrganizersTable />;
     }
 
     return (
@@ -293,7 +309,7 @@ function ProductsListPage() {
                     <Card.Body>
                         {loading ? (
                             <Loader />
-                        ) : products.length === 0 ? (
+                        ) : organizers.length === 0 ? (
                             <Empty />
                         ) : (
                             table
@@ -309,4 +325,4 @@ function ProductsListPage() {
 }
 
 
-export default ProductsListPage;
+export default OrganizersListPage;

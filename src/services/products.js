@@ -2,10 +2,10 @@ import { openDatabase, STORES } from '../backend/database.js';
 
 
 async function getProducts() {
-    const db = await openDatabase();
+    const database = await openDatabase();
 
     return new Promise(function(resolve, reject) {
-        const transaction = db.transaction(STORES.PRODUCTS, 'readonly');
+        const transaction = database.transaction(STORES.PRODUCTS, 'readonly');
         const index = transaction.objectStore(STORES.PRODUCTS).index('name');
         const request = index.getAll();
 

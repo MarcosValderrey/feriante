@@ -30,6 +30,25 @@ async function getWorkdays() {
 }
 
 
+async function getWorkdaysByOrganizerId(organizerId) {
+    const database = await openDatabase();
+
+    return new Promise(function(resolve, reject) {
+        const transaction = database.transaction(STORES.WORKDAYS, 'readonly');
+        const index = transaction.objectStore(STORES.WORKDAYS).index('organizerId');
+        const request = index.getAll(organizerId);
+
+        request.onsuccess = function() {
+            resolve(request.result);
+        };
+
+        request.onerror = function() {
+            reject(request.error);
+        };
+    });
+}
+
+
 async function getOldestWorkdays(limit = 5) {
     const database = await openDatabase();
 
@@ -190,6 +209,7 @@ async function deleteWorkday(id) {
 
 export {
     getWorkdays,
+    getWorkdaysByOrganizerId,
     getOldestWorkdays,
     getRecentWorkdays,
     getWorkday,

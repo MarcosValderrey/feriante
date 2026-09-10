@@ -14,7 +14,7 @@ import { updateProduct } from '../../../services/products';
 import phrases from '../../../utils/Phrases';
 
 
-function ProductFormPage() {
+function ProductsFormPage() {
     const { id } = useParams();
     const navigate = useNavigate();
 
@@ -79,7 +79,7 @@ function ProductFormPage() {
             })
             .catch(function(error) {
                 console.error('Failed to save product:', error);
-                setError('No se pudo guardar el producto.');
+                setError(phrases.get('components.pages.ProductsFormPage.error.product.cannotSave'));
                 setSaving(false);
             });
     }
@@ -199,9 +199,7 @@ function ProductFormPage() {
                             </Form.Group>
 
                             {error && (
-                                <div className='alert alert-danger'>
-                                    {error}
-                                </div>
+                                <div className='alert alert-danger'>{error}</div>
                             )}
 
                             <div className='d-flex justify-content-end gap-2'>
@@ -217,4 +215,4 @@ function ProductFormPage() {
 }
 
 
-export default ProductFormPage;
+export default ProductsFormPage;

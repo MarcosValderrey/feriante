@@ -2,6 +2,11 @@
     "App": {
         "paths": {
             "development": "/desarrollo",
+            "organizers": {
+                "list": "/organizadores",
+                "new": "/organizadores/nuevo",
+                "edit": "/organizadores/"
+            },
             "products": {
                 "list": "/productos",
                 "new": "/productos/nuevo",
@@ -15,6 +20,7 @@
         "common": {
             "Header": {
                 "development": "Desarrollo",
+                "organizers": "Organizadores",
                 "products": "Productos",
                 "sales": "Ventas",
                 "summary": "Resumen"
@@ -82,9 +88,74 @@
                     }
                 }
             },
+            "OrganizersFormPage": {
+                "title": "Productos",
+                "subtitle": "Gestioná los productos que vendés.",
+                "new": {
+                    "title": "Nueva organización",
+                    "subtitle": "Registrar una nueva feria."
+                },
+                "edit": {
+                    "title": "Editar organización",
+                    "subtitle": "Modificar los datos de la feria."
+                },
+                "loading": {
+                    "title": "Productos",
+                    "subtitle": "Cargando productos..."
+                },
+                "empty": "No hay organizadores registrados",
+                "form": {
+                    "name": "Nombre",
+                    "description": "Descripción",
+                    "cancel": "Cancelar",
+                    "save": "Guardar",
+                    "saving": "Guardando..."
+                },
+                "error": {
+                    "nameRequired": "El nombre es obligatorio.",
+                    "organizer": {
+                        "notFound": "No se encontró el organizador.",
+                        "cannotLoad": "No se pudo cargar el organizador.",
+                        "cannotSave": "No se pudo guardar el organizador."
+                    }
+                }
+            },
+            "OrganizersListPage": {
+                "title": "Organizadores",
+                "subtitle": "Gestioná las ferias a las que asististe.",
+                "new": "Nueva organización",
+                "empty": "No hay organizadores registrados",
+                "edit": {
+                    "tooltip": "Editar"
+                },
+                "delete": {
+                    "fail": "No se pudo eliminar la organización.",
+                    "tooltip": "Eliminar",
+                    "popup": {
+                        "title": "Eliminar organización",
+                        "question": "¿Deseas eliminar la organización",
+                        "cancel": "Cancelar",
+                        "confirm": "Eliminar",
+                        "processing": "Eliminando..."
+                    },
+                    "blocked": {
+                        "title": "No se puede eliminar",
+                        "subtitle": {
+                            "1": "No se puede eliminar la organización",
+                            "2": "porque tiene jornadas registradas."
+                        },
+                        "close": "Cerrar"
+                    }
+                },
+                "table": {
+                    "name": "Nombre",
+                    "description": "Descripción",
+                    "actions": "Acciones"
+                }
+            },
             "ProductsFormPage": {
                 "title": "Productos",
-                "subtitle": "Gestioná los productos que vendés",
+                "subtitle": "Gestioná los productos que vendés.",
                 "new": {
                     "title": "Nuevo producto",
                     "subtitle": "Registrar un nuevo producto"
@@ -109,7 +180,8 @@
                     "nameRequired": "El nombre es obligatorio.",
                     "product": {
                         "notFound": "No se encontró el producto.",
-                        "cannotLoad": "No se pudo cargar el producto."
+                        "cannotLoad": "No se pudo cargar el producto.",
+                        "cannotSave": "No se pudo guardar el producto."
                     }
                 }
             },
@@ -118,7 +190,11 @@
                 "subtitle": "Gestioná los productos que vendés",
                 "new": "Nuevo producto",
                 "empty": "No hay productos registrados",
+                "edit": {
+                    "tooltip": "Editar"
+                },
                 "delete": {
+                    "tooltip": "Eliminar",
                     "popup": {
                         "title": "Eliminar producto",
                         "question": "¿Deseas eliminar el producto",

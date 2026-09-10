@@ -95,6 +95,12 @@ function createStores(database) {
         }
     );
 
+    organizers.createIndex(
+        "name",
+        "name",
+        { unique: false }
+    );
+
     const workdays = database.createObjectStore(
         STORES.WORKDAYS,
         {

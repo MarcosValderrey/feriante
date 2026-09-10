@@ -6,11 +6,17 @@ async function getOrganizers() {
 
     return new Promise(function(resolve, reject) {
         const transaction = database.transaction(STORES.ORGANIZERS, 'readonly');
-        const store = transaction.objectStore(STORES.ORGANIZERS);
-        const request = store.getAll();
+        const index = transaction.objectStore(STORES.ORGANIZERS).index('name');
+        const request = index.getAll();
 
         request.onsuccess = function() {
-            resolve(request.result);
+            const organizers = request.result;
+
+            organizers.sort(function(a, b) {
+                return a.name.localeCompare(b.name, 'es', { sensitivity: 'base' });
+            });
+
+            resolve(organizers);
         };
 
         request.onerror = function() {
