@@ -20,7 +20,7 @@ function Header() {
                 <Navbar.Toggle aria-controls='feriante-navbar-nav'></Navbar.Toggle>
                 <Navbar.Collapse id='feriante-navbar-nav'>
                     <Nav className='ms-auto'>
-                        <Nav.Link as={NavLink} to={phrases.get('App.paths.products')}>{phrases.get('components.common.Header.products')}</Nav.Link>
+                        <Nav.Link as={NavLink} to={phrases.get('App.paths.products.list')}>{phrases.get('components.common.Header.products')}</Nav.Link>
                         <Nav.Link as={NavLink} to={phrases.get('App.paths.sales')}>{phrases.get('components.common.Header.sales')}</Nav.Link>
                         <Nav.Link as={NavLink} to={phrases.get('App.paths.summary')}>{phrases.get('components.common.Header.summary')}</Nav.Link>
                         <Nav.Link as={NavLink} to={phrases.get('App.paths.development')}>{phrases.get('components.common.Header.development')}</Nav.Link>

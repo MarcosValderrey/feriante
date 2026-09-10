@@ -83,7 +83,7 @@ async function createProduct({ name, description = null, image = null }) {
 }
 
 
-async function updateProduct(id, { name, image = null }) {
+async function updateProduct(id, { name, description = null, image = null }) {
     const database = await openDatabase();
 
     return new Promise(function(resolve, reject) {
@@ -93,6 +93,7 @@ async function updateProduct(id, { name, image = null }) {
         const product = {
             id,
             name,
+            description,
             image,
         };
 

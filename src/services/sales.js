@@ -58,6 +58,25 @@ async function getSalesByWorkdayId(workdayId) {
 }
 
 
+async function getSalesByProductId(productId) {
+    const database = await openDatabase();
+
+    return new Promise(function(resolve, reject) {
+        const transaction = database.transaction(STORES.SALES, 'readonly');
+        const index = transaction.objectStore(STORES.SALES).index('productId');
+        const request = index.getAll(productId);
+
+        request.onsuccess = function() {
+            resolve(request.result);
+        };
+
+        request.onerror = function() {
+            reject(request.error);
+        };
+    });
+}
+
+
 async function createSale({
     workdayId,
     productId,
@@ -153,6 +172,7 @@ export {
     getSales,
     getSaleById,
     getSalesByWorkdayId,
+    getSalesByProductId,
     createSale,
     updateSale,
     deleteSale

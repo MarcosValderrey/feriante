@@ -25,7 +25,7 @@ function HomePage() {
             <Row className='g-3 justify-content-center'>
                 <Col xs={12} sm={6} lg={4}>
                     <JumboLink
-                        href={phrases.get('App.paths.products')}
+                        href={phrases.get('App.paths.products.list')}
                         icon='box-seam'
                         title={phrases.get('components.pages.HomePage.links.products.title')}
                         description={phrases.get('components.pages.HomePage.links.products.description')}

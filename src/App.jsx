@@ -7,7 +7,8 @@ import './App.css';
 import Header from './components/common/Header';
 import DevelopmentPage from './components/pages/DevelopmentPage';
 import HomePage from './components/pages/HomePage';
-import ProductsPage from './components/pages/ProductsPage';
+import ProductsFormPage from './components/pages/products/ProductsFormPage';
+import ProductsListPage from './components/pages/products/ProductsListPage';
 import SalesPage from './components/pages/SalesPage';
 import SummaryPage from './components/pages/SummaryPage';
 
@@ -24,8 +25,12 @@ function App() {
             <Route path='/development' element={<DevelopmentPage />}/>
             <Route path='/desarrollo' element={<DevelopmentPage />}/>
 
-            <Route path='/products' element={<ProductsPage />}/>
-            <Route path='/productos' element={<ProductsPage />}/>
+            <Route path='/products' element={<ProductsListPage />}/>
+            <Route path='/productos' element={<ProductsListPage />}/>
+            <Route path='/products/new' element={<ProductsFormPage />}/>
+            <Route path='/productos/nuevo' element={<ProductsFormPage />}/>
+            <Route path='/products/:id' element={<ProductsFormPage />}/>
+            <Route path='/productos/:id' element={<ProductsFormPage />}/>
 
             <Route path='/sales' element={<SalesPage />}/>
             <Route path='/ventas' element={<SalesPage />}/>

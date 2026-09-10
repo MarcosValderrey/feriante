@@ -2,7 +2,11 @@
     "App": {
         "paths": {
             "development": "/desarrollo",
-            "products": "/productos",
+            "products": {
+                "list": "/productos",
+                "new": "/productos/nuevo",
+                "edit": "/productos/"
+            },
             "sales": "/ventas",
             "summary": "/resumen"
         }
@@ -78,14 +82,56 @@
                     }
                 }
             },
-            "ProductsPage": {
+            "ProductsFormPage": {
                 "title": "Productos",
                 "subtitle": "Gestioná los productos que vendés",
-                "new": "Nuevo producto",
+                "new": {
+                    "title": "Nuevo producto",
+                    "subtitle": "Registrar un nuevo producto"
+                },
+                "edit": {
+                    "title": "Editar producto",
+                    "subtitle": "Modificar los datos del producto"
+                },
                 "empty": "No hay productos registrados",
                 "table": {
                     "name": "Nombre",
                     "description": "Descripción"
+                },
+                "error": {
+                    "nameRequired": "El nombre es obligatorio.",
+                    "product": {
+                        "notFound": "No se encontró el producto.",
+                        "cannotLoad": "No se pudo cargar el producto."
+                    }
+                }
+            },
+            "ProductsListPage": {
+                "title": "Productos",
+                "subtitle": "Gestioná los productos que vendés",
+                "new": "Nuevo producto",
+                "empty": "No hay productos registrados",
+                "delete": {
+                    "popup": {
+                        "title": "Eliminar producto",
+                        "question": "¿Deseas eliminar el producto",
+                        "cancel": "Cancelar",
+                        "confirm": "Eliminar",
+                        "processing": "Eliminando..."
+                    },
+                    "blocked": {
+                        "title": "No se puede eliminar",
+                        "subtitle": {
+                            "1": "El producto",
+                            "2": "no se puede eliminar porque tiene ventas registradas."
+                        },
+                        "close": "Cerrar"
+                    }
+                },
+                "table": {
+                    "name": "Nombre",
+                    "description": "Descripción",
+                    "actions": "Acciones"
                 }
             },
             "SalesPage": {
