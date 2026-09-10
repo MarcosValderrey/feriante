@@ -74,6 +74,10 @@
                         "title": "Desarrollo",
                         "description": "Cargá datos de prueba para explorar y validar la aplicación"
                     },
+                    "organizers": {
+                        "title": "Organizadores",
+                        "description": "Administrá las ferias en las que participaste"
+                    },
                     "products": {
                         "title": "Productos",
                         "description": "Administrá tus productos"

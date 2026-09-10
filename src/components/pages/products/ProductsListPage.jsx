@@ -64,7 +64,7 @@ function ProductsListPage() {
 
     async function handleDeleteConfirm() {
         setDeleting(true);
-        setProductDeleteBlocked(null);
+        // setProductDeleteBlocked(null);
 
         try {
             const sales = await getSalesByProductId(productToDelete.id);
@@ -221,8 +221,10 @@ function ProductsListPage() {
                 </Modal.Header>
 
                 <Modal.Body>
-                    <span>{phrases.get('components.pages.ProductsListPage.delete.popup.question')}</span>{' '}
-                    <strong>{productToDelete.name}</strong>?
+                    <p>
+                        {phrases.get('components.pages.ProductsListPage.delete.popup.question')}{' '}
+                        <strong>{productToDelete.name}</strong>?
+                    </p>
                 </Modal.Body>
 
                 <Modal.Footer>
@@ -262,9 +264,11 @@ function ProductsListPage() {
                 </Modal.Header>
 
                 <Modal.Body>
-                    {phrases.get('components.pages.ProductsListPage.delete.blocked.subtitle.1')}{' '}
-                    <strong>{productDeleteBlocked.name}</strong>{' '}
-                    {phrases.get('components.pages.ProductsListPage.delete.blocked.subtitle.2')}
+                    <p className='mb-0'>
+                        {phrases.get('components.pages.ProductsListPage.delete.blocked.subtitle.1')}{' '}
+                        <strong>{productDeleteBlocked.name}</strong>{' '}
+                        {phrases.get('components.pages.ProductsListPage.delete.blocked.subtitle.2')}
+                    </p>
                 </Modal.Body>
 
                 <Modal.Footer>

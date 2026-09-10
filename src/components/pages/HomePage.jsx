@@ -34,6 +34,15 @@ function HomePage() {
 
                 <Col xs={12} sm={6} lg={4}>
                     <JumboLink
+                        href={phrases.get('App.paths.organizers.list')}
+                        icon='shop'
+                        title={phrases.get('components.pages.HomePage.links.organizers.title')}
+                        description={phrases.get('components.pages.HomePage.links.organizers.description')}
+                    />
+                </Col>
+
+                <Col xs={12} sm={6} lg={4}>
+                    <JumboLink
                         href={phrases.get('App.paths.sales')}
                         icon='cart-plus'
                         title={phrases.get('components.pages.HomePage.links.sales.title')}
