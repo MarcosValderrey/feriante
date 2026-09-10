@@ -93,10 +93,17 @@
                     "title": "Editar producto",
                     "subtitle": "Modificar los datos del producto"
                 },
+                "loading": {
+                    "title": "Productos",
+                    "subtitle": "Cargando productos..."
+                },
                 "empty": "No hay productos registrados",
-                "table": {
+                "form": {
                     "name": "Nombre",
-                    "description": "Descripción"
+                    "description": "Descripción",
+                    "cancel": "Cancelar",
+                    "save": "Guardar",
+                    "saving": "Guardando..."
                 },
                 "error": {
                     "nameRequired": "El nombre es obligatorio.",

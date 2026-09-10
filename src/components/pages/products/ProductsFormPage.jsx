@@ -113,8 +113,8 @@ function ProductFormPage() {
             <>
                 <PageHeader
                     icon='box-seam'
-                    title={phrases.get('components.pages.ProductsFormPage.title')}
-                    subtitle='Cargando producto...' />
+                    title={phrases.get('components.pages.ProductsFormPage.loading.title')}
+                    subtitle={phrases.get('components.pages.ProductsFormPage.loading.subtitle')} />
 
                 <Container fluid>
                     <Card className='shadow-sm'>
@@ -126,6 +126,35 @@ function ProductFormPage() {
                     </Card>
                 </Container>
             </>
+        );
+    }
+
+    function FormCancelButton() {
+        return (
+            <Button
+                variant='secondary'
+                onClick={handleCancel}
+                disabled={saving}>
+                {phrases.get('components.pages.ProductsFormPage.form.cancel')}
+            </Button>
+        );
+    }
+
+    function FormSaveButton() {
+        var buttonText = null;
+        if (saving) {
+            buttonText = phrases.get('components.pages.ProductsFormPage.form.saving');
+        } else {
+            buttonText = phrases.get('components.pages.ProductsFormPage.form.save');
+        }
+
+        return (
+            <Button
+                variant='primary'
+                type='submit'
+                disabled={saving}>
+                {buttonText}
+            </Button>
         );
     }
 
@@ -141,7 +170,7 @@ function ProductFormPage() {
                                 className='mb-3'
                                 controlId='product-name'>
 
-                                <Form.Label>Nombre</Form.Label>
+                                <Form.Label>{phrases.get('components.pages.ProductsFormPage.form.name')}</Form.Label>
 
                                 <Form.Control
                                     type='text'
@@ -157,7 +186,7 @@ function ProductFormPage() {
                                 className='mb-3'
                                 controlId='product-description'>
 
-                                <Form.Label>Descripción</Form.Label>
+                                <Form.Label>{phrases.get('components.pages.ProductsFormPage.form.description')}</Form.Label>
 
                                 <Form.Control
                                     as='textarea'
@@ -176,19 +205,8 @@ function ProductFormPage() {
                             )}
 
                             <div className='d-flex justify-content-end gap-2'>
-                                <Button
-                                    variant='secondary'
-                                    onClick={handleCancel}
-                                    disabled={saving}>
-                                    Cancelar
-                                </Button>
-
-                                <Button
-                                    variant='primary'
-                                    type='submit'
-                                    disabled={saving}>
-                                    {saving ? 'Guardando...' : 'Guardar'}
-                                </Button>
+                                <FormCancelButton />
+                                <FormSaveButton />
                             </div>
                         </Form>
                     </Card.Body>
