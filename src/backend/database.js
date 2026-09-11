@@ -1,5 +1,5 @@
 const DATABASE_NAME = 'feriante';
-const DATABASE_VERSION = 1;
+const DATABASE_VERSION = 2;
 
 const STORES = {
     PRODUCTS: 'products',
@@ -7,7 +7,6 @@ const STORES = {
     WORKDAYS: 'workdays',
     SALES: 'sales'
 };
-
 
 
 /**
@@ -72,6 +71,14 @@ async function clearDatabase(database) {
             reject(transaction.error);
         };
     });
+}
+
+
+/**
+ * Completely remove the database object from IndexedDB.
+ */
+function truncateDatabase() {
+    indexedDB.deleteDatabase(DATABASE_NAME);
 }
 
 
@@ -154,5 +161,6 @@ function createStores(database) {
 export {
     openDatabase,
     clearDatabase,
+    truncateDatabase,
     STORES
 };

@@ -12,6 +12,7 @@ import Spinner from 'react-bootstrap/Spinner';
 import PageHeader from '../common/PageHeader.jsx';
 import { clearDatabase } from '../../backend/database.js';
 import { openDatabase } from '../../backend/database.js';
+import { truncateDatabase } from '../../backend/database.js';
 import { importSemanticData } from '../../backend/migration.js';
 import developmentSmallFixture from '../../assets/fixtures/development-small.json';
 import developmentLargeFixture from '../../assets/fixtures/development-large.json';
@@ -95,8 +96,12 @@ function DeveloperPage() {
         try {
             setDeleting(true);
 
-            const database = await openDatabase();
-            await clearDatabase(database);
+            // Delete database object store while keeping the database object
+            // const database = await openDatabase();
+            // await clearDatabase(database);
+
+            // Delete the whole database object
+            truncateDatabase();
 
             setShowDeleteModal(false);
 
