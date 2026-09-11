@@ -159,7 +159,7 @@ function ProductsListPage() {
         return (
             <Table responsive hover size='sm' className='mb-4 small'>
                 <thead>
-                    <tr>
+                    <tr className='align-middle'>
                         <th scope='col' className='col-6'>
                             {phrases.get('components.pages.ProductsListPage.table.name')}
                         </th>
@@ -215,9 +215,7 @@ function ProductsListPage() {
                 centered>
 
                 <Modal.Header closeButton>
-                    <Modal.Title>
-                        {phrases.get('components.pages.ProductsListPage.delete.popup.title')}
-                    </Modal.Title>
+                    <Modal.Title>{phrases.get('components.pages.ProductsListPage.delete.popup.title')}</Modal.Title>
                 </Modal.Header>
 
                 <Modal.Body>
@@ -258,9 +256,7 @@ function ProductsListPage() {
                 centered>
 
                 <Modal.Header closeButton>
-                    <Modal.Title>
-                        {phrases.get('components.pages.ProductsListPage.delete.blocked.title')}
-                    </Modal.Title>
+                    <Modal.Title>{phrases.get('components.pages.ProductsListPage.delete.blocked.title')}</Modal.Title>
                 </Modal.Header>
 
                 <Modal.Body>

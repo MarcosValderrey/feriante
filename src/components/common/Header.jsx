@@ -22,7 +22,7 @@ function Header() {
                     <Nav className='ms-auto'>
                         <Nav.Link as={NavLink} to={phrases.get('App.paths.products.list')}>{phrases.get('components.common.Header.products')}</Nav.Link>
                         <Nav.Link as={NavLink} to={phrases.get('App.paths.organizers.list')}>{phrases.get('components.common.Header.organizers')}</Nav.Link>
-                        <Nav.Link as={NavLink} to={phrases.get('App.paths.sales')}>{phrases.get('components.common.Header.sales')}</Nav.Link>
+                        <Nav.Link as={NavLink} to={phrases.get('App.paths.workdays.list')}>{phrases.get('components.common.Header.workdays')}</Nav.Link>
                         <Nav.Link as={NavLink} to={phrases.get('App.paths.summary')}>{phrases.get('components.common.Header.summary')}</Nav.Link>
                         <Nav.Link as={NavLink} to={phrases.get('App.paths.development')}>{phrases.get('components.common.Header.development')}</Nav.Link>
                     </Nav>

@@ -166,7 +166,7 @@ function OrganizersListPage() {
         return (
             <Table responsive hover size='sm' className='mb-4 small'>
                 <thead>
-                    <tr>
+                    <tr className='align-middle'>
                         <th scope='col' className='col-6'>
                             {phrases.get(
                                 'components.pages.OrganizersListPage.table.name'

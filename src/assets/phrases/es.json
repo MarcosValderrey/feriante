@@ -2,6 +2,11 @@
     "App": {
         "paths": {
             "development": "/desarrollo",
+            "edit": "/editar",
+            "new": {
+                "female": "/nueva",
+                "male": "/nuevo"
+            },
             "organizers": {
                 "list": "/organizadores",
                 "new": "/organizadores/nuevo",
@@ -13,7 +18,12 @@
                 "edit": "/productos/"
             },
             "sales": "/ventas",
-            "summary": "/resumen"
+            "summary": "/resumen",
+            "workdays": {
+                "list": "/jornadas",
+                "new": "/jornadas/nueva",
+                "edit": "/jornadas/"
+            }
         }
     },
     "components": {
@@ -23,7 +33,8 @@
                 "organizers": "Organizadores",
                 "products": "Productos",
                 "sales": "Ventas",
-                "summary": "Resumen"
+                "summary": "Resumen",
+                "workdays": "Jornadas"
             }
         },
         "pages": {
@@ -89,6 +100,10 @@
                     "summary": {
                         "title": "Resumen",
                         "description": "Mirá cómo vienen tus ventas"
+                    },
+                    "workdays": {
+                        "title": "Jornadas",
+                        "description": "Gestioná tus jornadas de trabajo"
                     }
                 }
             },
@@ -221,6 +236,28 @@
                     "actions": "Acciones"
                 }
             },
+            "SalesFormPage": {
+                "cancel": "Cancelar",
+                "edit": {
+                    "title": "Editar venta",
+                    "subtitle": "Modificá los detalles de la venta."
+                },
+                "new": {
+                    "title": "Nueva venta",
+                    "subtitle": "Ingresá los datos de la venta para esta jornada."
+                },
+                "note": "Nota",
+                "price": "Precio Total",
+                "product": {
+                    "label": "Producto",
+                    "select": "Elegí un producto"
+                },
+                "quantity": "Cantidad",
+                "save": {
+                    "processing": "Guardando...",
+                    "submit": "Guardar"
+                }
+            },
             "SalesPage": {
                 "title": "Ventas",
                 "subtitle": "Registrá lo que vendiste",
@@ -286,6 +323,94 @@
                     "title": "Jornadas",
                     "byQuantity": "Por productos vendidos",
                     "byRevenue": "Por facturación generada"
+                }
+            },
+            "WorkdayDetailPage": {
+                "delete": {
+                    "cancel": "Cancelar",
+                    "confirm": "Eliminar",
+                    "processing": "Eliminando...",
+                    "question": "¿Estás seguro de que querés eliminar esta venta?",
+                    "title": "Eliminar venta",
+                    "tooltip": "Eliminar"
+                },
+                "edit": {
+                    "tooltip": "Editar"
+                },
+                "editWorkday": "Editar",
+                "empty": {
+                    "back": "Regresar a la lista",
+                    "message": "Jornada no encontrada",
+                    "noSales": "No hay ventas registradas esta jornada."
+                },
+                "recordSale": "Registrar venta",
+                "sales": {
+                    "title": "Ventas",
+                    "table": {
+                        "actions": "Acciones",
+                        "note": "Nota",
+                        "product": "Producto",
+                        "quantity": "Cantidad",
+                        "total": "Total"
+                    }
+                },
+                "total": "Total"
+            },
+            "WorkdaysFormPage": {
+                "cancel": "Cancelar",
+                "date": "Fecha",
+                "description": "Descripción",
+                "edit": {
+                    "title": "Editar jornada",
+                    "subtitle": "Modificar los datos de la jornada."
+                },
+                "new": {
+                    "title": "Nueva jornada",
+                    "subtitle": "Registrá los datos de la nueva jornada."
+                },
+                "organizer": {
+                    "label": "Organizador",
+                    "select": "Elegí un organizador"
+                },
+                "save": {
+                    "processing": "Guardando...",
+                    "submit": "Guardar"
+                }
+            },
+            "WorkdaysListPage": {
+                "title": "Jornadas",
+                "subtitle": "Gestioná tus jornadas de trabajo",
+                "new": "Nueva jornada",
+                "empty": "No hay jornadas registradas.",
+                "edit": {
+                    "tooltip": "Editar"
+                },
+                "delete": {
+                    "tooltip": "Eliminar",
+                    "popup": {
+                        "title": "Eliminar jornada",
+                        "question": "¿Deseas eliminar la jornada del",
+                        "cancel": "Cancelar",
+                        "confirm": "Eliminar",
+                        "processing": "Eliminando..."
+                    },
+                    "blocked": {
+                        "title": "No se puede eliminar",
+                        "subtitle": {
+                            "1": "La jornada del",
+                            "2": "no se puede eliminar porque tiene ventas registradas."
+                        },
+                        "close": "Cerrar"
+                    }
+                },
+                "table": {
+                    "actions": "Acciones",
+                    "description": "Descripción",
+                    "date": "Fecha",
+                    "organizer": "Organizador"
+                },
+                "view": {
+                    "tooltip": "Ver"
                 }
             }
         }

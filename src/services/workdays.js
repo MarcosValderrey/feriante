@@ -105,7 +105,7 @@ async function getRecentWorkdays(limit = 5) {
 }
 
 
-async function getWorkday(id) {
+async function getWorkdayById(id) {
     const database = await openDatabase();
 
     return new Promise(function(resolve, reject) {
@@ -212,7 +212,7 @@ export {
     getWorkdaysByOrganizerId,
     getOldestWorkdays,
     getRecentWorkdays,
-    getWorkday,
+    getWorkdayById,
     createWorkday,
     updateWorkday,
     deleteWorkday

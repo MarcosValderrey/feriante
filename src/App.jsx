@@ -11,8 +11,12 @@ import OrganizersFormPage from './components/pages/organizers/OrganizersFormPage
 import OrganizersListPage from './components/pages/organizers/OrganizersListPage';
 import ProductsFormPage from './components/pages/products/ProductsFormPage';
 import ProductsListPage from './components/pages/products/ProductsListPage';
+import SalesFormPage from './components/pages/sales/SalesFormPage';
 import SalesPage from './components/pages/SalesPage';
 import SummaryPage from './components/pages/SummaryPage';
+import WorkdayDetailPage from './components/pages/workdays/WorkdayDetailPage';
+import WorkdaysFormPage from './components/pages/workdays/WorkdaysFormPage';
+import WorkdaysListPage from './components/pages/workdays/WorkdaysListPage';
 
 
 function App() {
@@ -40,6 +44,20 @@ function App() {
             <Route path='/productos' element={<ProductsListPage />}/>
             <Route path='/productos/nuevo' element={<ProductsFormPage />}/>
             <Route path='/productos/:id' element={<ProductsFormPage />}/>
+
+            <Route path='/workdays' element={<WorkdaysListPage />}/>
+            <Route path='/workdays/:id/edit' element={<WorkdaysFormPage />}/>
+            <Route path='/workdays/:id' element={<WorkdayDetailPage />}/>
+            <Route path='/workdays/new' element={<WorkdaysFormPage />}/>
+            <Route path='/workdays/:id/sales/:saleId' element={<SalesFormPage />}/>
+            <Route path='/workdays/:id/sales/new' element={<SalesFormPage />}/>
+
+            <Route path='/jornadas' element={<WorkdaysListPage />}/>
+            <Route path='/jornadas/:id/editar' element={<WorkdaysFormPage />}/>
+            <Route path='/jornadas/:id' element={<WorkdayDetailPage />}/>
+            <Route path='/jornadas/nueva' element={<WorkdaysFormPage />}/>
+            <Route path='/jornadas/:id/ventas/:saleId' element={<SalesFormPage />}/>
+            <Route path='/jornadas/:id/ventas/nueva' element={<SalesFormPage />}/>
 
             <Route path='/sales' element={<SalesPage />}/>
             <Route path='/ventas' element={<SalesPage />}/>
