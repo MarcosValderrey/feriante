@@ -42,25 +42,33 @@ function openDatabase() {
  * @param {IDBDatabase} database
  */
 async function clearDatabase(database) {
-    return new Promise(function(resolve, reject) {
-        const transaction = database.transaction(
-            [
-                STORES.PRODUCTS,
-                STORES.ORGANIZERS,
-                STORES.WORKDAYS,
-                STORES.SALES
-            ],
-            'readwrite'
-        );
+    const storeNames = [
+        STORES.PRODUCTS,
+        STORES.ORGANIZERS,
+        STORES.WORKDAYS,
+        STORES.SALES
+    ].filter(function(storeName) {
+        return database.objectStoreNames.contains(storeName);
+    });
 
-        transaction.objectStore(STORES.PRODUCTS).clear();
-        transaction.objectStore(STORES.ORGANIZERS).clear();
-        transaction.objectStore(STORES.WORKDAYS).clear();
-        transaction.objectStore(STORES.SALES).clear();
+    if (storeNames.length === 0) {
+        return;
+    }
+
+    return new Promise(function(resolve, reject) {
+        const transaction = database.transaction(storeNames,'readwrite');
+
+        storeNames.forEach(function(storeName) {
+            transaction.objectStore(storeName).clear();
+        });
 
         transaction.oncomplete = resolve;
 
         transaction.onerror = function() {
+            reject(transaction.error);
+        };
+
+        transaction.onabort = function() {
             reject(transaction.error);
         };
     });
