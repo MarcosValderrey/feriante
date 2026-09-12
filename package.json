@@ -1,7 +1,7 @@
 {
   "name": "feriante",
   "private": true,
-  "version": "0.2.3",
+  "version": "0.2.4",
   "author": "Marcos Valderrey",
   "type": "module",
   "scripts": {
