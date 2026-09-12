@@ -204,53 +204,57 @@ function WorkdaysListPage() {
     function WorkdaysTable() {
         return (
             <div className='d-none d-md-block'>
-                <Table responsive hover size='sm' className='mb-4 small'>
-                    <thead>
-                        <tr>
-                            <th scope='col'>
-                                {phrases.get('components.pages.WorkdaysListPage.table.date')}
-                            </th>
+                <Card className='shadow-sm'>
+                    <Card.Body>
+                        <Table responsive hover size='sm' className='mb-4 small'>
+                            <thead>
+                                <tr>
+                                    <th scope='col'>
+                                        {phrases.get('components.pages.WorkdaysListPage.table.date')}
+                                    </th>
 
-                            <th scope='col'>
-                                {phrases.get('components.pages.WorkdaysListPage.table.organizer')}
-                            </th>
+                                    <th scope='col'>
+                                        {phrases.get('components.pages.WorkdaysListPage.table.organizer')}
+                                    </th>
 
-                            <th scope='col'>
-                                {phrases.get('components.pages.WorkdaysListPage.table.description')}
-                            </th>
+                                    <th scope='col'>
+                                        {phrases.get('components.pages.WorkdaysListPage.table.description')}
+                                    </th>
 
-                            <th scope='col' className='text-end'>
-                                {phrases.get('components.pages.WorkdaysListPage.table.actions')}
-                            </th>
-                        </tr>
-                    </thead>
-
-                    <tbody className='table-group-divider'>
-                        {workdays.map(function(workday) {
-                            const organizer = organizers[workday.organizerId];
-
-                            return (
-                                <tr key={workday.id} className='align-middle'>
-                                    <td>{Formats.asDate(workday.date)}</td>
-
-                                    <td className='text-nowrap'>
-                                        {organizer ? organizer.name : '—'}
-                                    </td>
-
-                                    <td className='text-body-secondary'>
-                                        {workday.description || '—'}
-                                    </td>
-
-                                    <td className='text-end text-nowrap'>
-                                        <ViewButton workdayId={workday.id} />
-                                        <EditButton workdayId={workday.id} />
-                                        <DeleteButton workday={workday} />
-                                    </td>
+                                    <th scope='col' className='text-end'>
+                                        {phrases.get('components.pages.WorkdaysListPage.table.actions')}
+                                    </th>
                                 </tr>
-                            );
-                        })}
-                    </tbody>
-                </Table>
+                            </thead>
+
+                            <tbody className='table-group-divider'>
+                                {workdays.map(function(workday) {
+                                    const organizer = organizers[workday.organizerId];
+
+                                    return (
+                                        <tr key={workday.id} className='align-middle'>
+                                            <td>{Formats.asDate(workday.date)}</td>
+
+                                            <td className='text-nowrap'>
+                                                {organizer ? organizer.name : '—'}
+                                            </td>
+
+                                            <td className='text-body-secondary'>
+                                                {workday.description || '—'}
+                                            </td>
+
+                                            <td className='text-end text-nowrap'>
+                                                <ViewButton workdayId={workday.id} />
+                                                <EditButton workdayId={workday.id} />
+                                                <DeleteButton workday={workday} />
+                                            </td>
+                                        </tr>
+                                    );
+                                })}
+                            </tbody>
+                        </Table>
+                    </Card.Body>
+                </Card>
             </div>
         );
     }
