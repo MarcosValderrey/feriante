@@ -47,10 +47,6 @@
                 "title": "Products",
                 "subtitle": "Manage your products"
             },
-            "SalesPage": {
-                "title": "Sales",
-                "subtitle": "Register what you sold"
-            },
             "SummaryPage": {
                 "title": "Summary",
                 "subtitle": "Watch how your sales are going"

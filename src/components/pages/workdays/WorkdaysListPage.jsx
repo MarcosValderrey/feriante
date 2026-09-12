@@ -10,6 +10,7 @@ import { Table } from 'react-bootstrap';
 
 import { useNavigate } from 'react-router-dom';
 
+import CardRecordField from '../../common/CardRecordField';
 import PageHeader from '../../common/PageHeader';
 import { deleteWorkday, getWorkdays } from '../../../services/workdays';
 import { getSalesByWorkdayId } from '../../../services/sales';
@@ -267,23 +268,28 @@ function WorkdaysListPage() {
 
                     return (
                         <Card key={workday.id} className='mb-3 shadow-sm'>
-                            <Card.Body>
-                                <div className='d-flex justify-content-between align-items-start'>
-                                    <div className='me-3'>
-                                        <div className='fw-semibold'>{Formats.asDate(workday.date)}</div>
-                                        <div className='text-body-secondary'>{organizer ? organizer.name : '—'}</div>
+                            <Card.Header className='d-flex justify-content-between align-items-center'>
+                                <span className='fw-semibold'>
+                                    {Formats.asDate(workday.date)}
+                                </span>
 
-                                        {workday.description && (
-                                            <div className='mt-2'>{workday.description}</div>
-                                        )}
-                                    </div>
-
-                                    <div className='text-nowrap'>
-                                        <ViewButton workdayId={workday.id} />
-                                        <EditButton workdayId={workday.id} />
-                                        <DeleteButton workday={workday} />
-                                    </div>
+                                <div className='text-nowrap'>
+                                    <ViewButton workdayId={workday.id} />
+                                    <EditButton workdayId={workday.id} />
+                                    <DeleteButton workday={workday} />
                                 </div>
+                            </Card.Header>
+
+                            <Card.Body className='p-0'>
+                                <CardRecordField
+                                    label={phrases.get('components.pages.WorkdaysListPage.table.organizer')}
+                                    value={organizer ? organizer.name : '—'}
+                                />
+
+                                <CardRecordField
+                                    label={phrases.get('components.pages.WorkdaysListPage.table.description')}
+                                    value={workday.description || '—'}
+                                />
                             </Card.Body>
                         </Card>
                     );

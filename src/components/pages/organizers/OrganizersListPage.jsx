@@ -1,15 +1,14 @@
 import { useEffect } from 'react';
 import { useState } from 'react';
-
-import Button from 'react-bootstrap/Button';
-import Card from 'react-bootstrap/Card';
-import Container from 'react-bootstrap/Container';
-import Modal from 'react-bootstrap/Modal';
-import Spinner from 'react-bootstrap/Spinner';
-import Table from 'react-bootstrap/Table';
-
+import { Button } from 'react-bootstrap';
+import { Card } from 'react-bootstrap';
+import { Container } from 'react-bootstrap';
+import { Modal } from 'react-bootstrap';
+import { Spinner } from 'react-bootstrap';
+import { Table } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 
+import CardRecordField from '../../common/CardRecordField';
 import PageHeader from '../../common/PageHeader';
 import { deleteOrganizer } from '../../../services/organizers';
 import { getOrganizers } from '../../../services/organizers';
@@ -163,44 +162,85 @@ function OrganizersListPage() {
 
     function OrganizersTable() {
         return (
-            <Table responsive hover size='sm' className='mb-4 small'>
-                <thead>
-                    <tr className='align-middle'>
-                        <th scope='col' className='col-6'>
-                            {phrases.get(
-                                'components.pages.OrganizersListPage.table.name'
-                            )}
-                        </th>
+            <div className='d-none d-md-block'>
+                <Card className='shadow-sm'>
+                    <Card.Body>
+                        <Table responsive hover size='sm' className='mb-4 small'>
+                            <thead>
+                                <tr className='align-middle'>
+                                    <th scope='col' className='col-6'>
+                                        {phrases.get(
+                                            'components.pages.OrganizersListPage.table.name'
+                                        )}
+                                    </th>
 
-                        <th scope='col' className='col-5'>
-                            {phrases.get(
-                                'components.pages.OrganizersListPage.table.description'
-                            )}
-                        </th>
+                                    <th scope='col' className='col-5'>
+                                        {phrases.get(
+                                            'components.pages.OrganizersListPage.table.description'
+                                        )}
+                                    </th>
 
-                        <th scope='col' className='col-1'></th>
-                    </tr>
-                </thead>
+                                    <th scope='col' className='col-1'></th>
+                                </tr>
+                            </thead>
 
-                <tbody className='table-group-divider'>
-                    {organizers.map(function(organizer) {
-                        return (
-                            <tr key={organizer.id} className='align-middle'>
-                                <td>{organizer.name}</td>
+                            <tbody className='table-group-divider'>
+                                {organizers.map(function(organizer) {
+                                    return (
+                                        <tr key={organizer.id} className='align-middle'>
+                                            <td>{organizer.name}</td>
 
-                                <td className='text-body-secondary'>
-                                    {organizer.description || '—'}
-                                </td>
+                                            <td className='text-body-secondary'>
+                                                {organizer.description || '—'}
+                                            </td>
 
-                                <td className='text-end text-nowrap'>
+                                            <td className='text-end text-nowrap'>
+                                                <EditButton organizerId={organizer.id} />
+                                                <DeleteButton organizer={organizer} />
+                                            </td>
+                                        </tr>
+                                    );
+                                })}
+                            </tbody>
+                        </Table>
+                    </Card.Body>
+                </Card>
+            </div>
+        );
+    }
+
+    function OrganizerCards() {
+        return (
+            <div className='d-md-none'>
+                {organizers.map(function(organizer) {
+                    return (
+                        <Card key={organizer.id} className='mb-3 shadow-sm'>
+                            <Card.Header className='d-flex justify-content-between align-items-center'>
+                                <span className='fw-semibold'>
+                                    
+                                </span>
+
+                                <div className='text-nowrap'>
                                     <EditButton organizerId={organizer.id} />
                                     <DeleteButton organizer={organizer} />
-                                </td>
-                            </tr>
-                        );
-                    })}
-                </tbody>
-            </Table>
+                                </div>
+                            </Card.Header>
+
+                            <Card.Body className='p-0'>
+                                <CardRecordField
+                                    label={phrases.get('components.pages.OrganizersListPage.table.name')}
+                                    value={organizer ? organizer.name : '—'}
+                                />
+
+                                <CardRecordField
+                                    label={phrases.get('components.pages.OrganizersListPage.table.description')}
+                                    value={organizer.description || '—'}
+                                />
+                            </Card.Body>
+                        </Card>
+                    );
+                })}
+            </div>
         );
     }
 
@@ -294,9 +334,15 @@ function OrganizersListPage() {
         );
     }
 
-    var table = null;
+    var content = null;
+
     if (organizers && organizers.length > 0) {
-        table = <OrganizersTable />;
+        content = (
+            <>
+                <OrganizersTable />
+                <OrganizerCards />
+            </>
+        );
     }
 
     return (
@@ -304,17 +350,13 @@ function OrganizersListPage() {
             <Header />
 
             <Container fluid>
-                <Card className='shadow-sm'>
-                    <Card.Body>
-                        {loading ? (
-                            <Loader />
-                        ) : organizers.length === 0 ? (
-                            <Empty />
-                        ) : (
-                            table
-                        )}
-                    </Card.Body>
-                </Card>
+                {loading ? (
+                    <Loader />
+                ) : organizers.length === 0 ? (
+                    <Empty />
+                ) : (
+                    content
+                )}
             </Container>
 
             <DeleteConfirmationModal />

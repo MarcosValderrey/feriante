@@ -7,8 +7,8 @@ import Spinner from 'react-bootstrap/Spinner';
 import Table from 'react-bootstrap/Table';
 import { useNavigate, useParams } from 'react-router-dom';
 
+import CardRecordField from '../../common/CardRecordField.jsx';
 import PageHeader from '../../common/PageHeader.jsx';
-
 import { getWorkdayById } from '../../../services/workdays.js';
 import { getOrganizerById } from '../../../services/organizers.js';
 import { deleteSale } from '../../../services/sales.js';
@@ -139,6 +139,142 @@ function WorkdayDetailPage() {
         );
     }
 
+    function EditButton({ saleId }) {
+        return (
+            <Button
+                variant='outline-primary'
+                size='sm'
+                className='me-1'
+                title={phrases.get('components.pages.WorkdayDetailPage.edit.tooltip')}
+                onClick={() => navigate(Links.getEditSale(id, saleId))}>
+                <i className='bi bi-pencil'></i>
+            </Button>
+        );
+    }
+
+    function DeleteButton({ sale }) {
+        return (
+            <Button
+                variant='outline-danger'
+                size='sm'
+                title={phrases.get('components.pages.WorkdayDetailPage.delete.tooltip')}
+                onClick={() => handleDeleteRequest(sale)}>
+                <i className='bi bi-trash'></i>
+            </Button>
+        );
+    }
+
+    function SaleTable() {
+        return (
+            <div className='d-none d-md-block'>
+                <Table responsive hover size='sm' className='mb-4 small'>
+                    <thead>
+                        <tr className='align-middle'>
+                            <th>{phrases.get('components.pages.WorkdayDetailPage.sales.table.product')}</th>
+                            <th>{phrases.get('components.pages.WorkdayDetailPage.sales.table.note')}</th>
+                            <th className='text-end'>{phrases.get('components.pages.WorkdayDetailPage.sales.table.quantity')}</th>
+                            <th className='text-end'>{phrases.get('components.pages.WorkdayDetailPage.sales.table.total')}</th>
+                            <th className='text-end'>{phrases.get('components.pages.WorkdayDetailPage.sales.table.actions')}</th>
+                        </tr>
+                    </thead>
+
+                    <tbody className='table-group-divider'>
+                        {sales.map(function(sale) {
+                            return (
+                                <tr key={sale.id} className='align-middle'>
+                                    <td>{getProductName(sale.productId)}</td>
+                                    <td>{sale.note}</td>
+                                    <td className='text-end'>{sale.quantity}</td>
+                                    <td className='text-end text-nowrap'>{Formats.asMoney(sale.totalPrice)}</td>
+
+                                    <td className='text-end'>
+                                        <EditButton saleId={sale.id} />
+                                        <DeleteButton sale={sale} />
+                                    </td>
+                                </tr>
+                            );
+                        })}
+                    </tbody>
+
+                    <tfoot className='table-group-divider'>
+                        <tr>
+                            <th>{phrases.get('components.pages.WorkdayDetailPage.total')}</th>
+                            <th></th>
+                            <th className='text-end'>{getTotalQuantity()}</th>
+                            <th className='text-end'>{Formats.asMoney(getTotalRevenue())}</th>
+                            <th></th>
+                        </tr>
+                    </tfoot>
+                </Table>
+            </div>
+        );
+    }
+
+    function SaleCards() {
+        return (
+            <div className='d-md-none'>
+                {sales.map(function(sale) {
+                    return (
+                        <Card key={sale.id} className='mb-3 shadow-sm'>
+                            <Card.Header className='d-flex justify-content-between align-items-center'>
+                                <span className='fw-semibold'>
+                                    
+                                </span>
+
+                                <div className='text-nowrap'>
+                                    <EditButton saleId={sale.id} />
+                                    <DeleteButton sale={sale} />
+                                </div>
+                            </Card.Header>
+
+                            <Card.Body className='p-0'>
+                                <CardRecordField
+                                    label={phrases.get('components.pages.WorkdayDetailPage.sales.table.product')}
+                                    value={getProductName(sale.productId)}
+                                />
+
+                                <CardRecordField
+                                    label={phrases.get('components.pages.WorkdayDetailPage.sales.table.note')}
+                                    value={sale.note}
+                                />
+
+                                <CardRecordField
+                                    label={phrases.get('components.pages.WorkdayDetailPage.sales.table.quantity')}
+                                    value={sale.quantity}
+                                />
+
+                                <CardRecordField
+                                    label={phrases.get('components.pages.WorkdayDetailPage.sales.table.total')}
+                                    value={Formats.asMoney(sale.totalPrice)}
+                                />
+                            </Card.Body>
+                        </Card>
+                    );
+                })}
+
+                <Card>
+                    <Card.Header>
+                        <span className='fw-semibold'>{phrases.get('components.pages.WorkdayDetailPage.total')}</span>
+                    </Card.Header>
+
+                    <Card.Body className='p-0'>
+                        <CardRecordField
+                            label={phrases.get('components.pages.WorkdayDetailPage.sales.table.quantity')}
+                            value={getTotalQuantity()}
+                            hightlight
+                        />
+
+                        <CardRecordField
+                            label={phrases.get('components.pages.WorkdayDetailPage.sales.table.total')}
+                            value={Formats.asMoney(getTotalRevenue())}
+                            hightlight
+                        />
+                    </Card.Body>
+                </Card>
+            </div>
+        );
+    }
+
     return (
         <>
             <PageHeader
@@ -183,61 +319,8 @@ function WorkdayDetailPage() {
                     </Card>
                 ) : (
                     <>
-                        <Table responsive hover size='sm' className='mb-4 small'>
-                            <thead>
-                                <tr className='align-middle'>
-                                    <th>{phrases.get('components.pages.WorkdayDetailPage.sales.table.product')}</th>
-                                    <th>{phrases.get('components.pages.WorkdayDetailPage.sales.table.note')}</th>
-                                    <th className='text-end'>{phrases.get('components.pages.WorkdayDetailPage.sales.table.quantity')}</th>
-                                    <th className='text-end'>{phrases.get('components.pages.WorkdayDetailPage.sales.table.total')}</th>
-                                    <th className='text-end'>{phrases.get('components.pages.WorkdayDetailPage.sales.table.actions')}</th>
-                                </tr>
-                            </thead>
-
-                            <tbody className='table-group-divider'>
-                                {sales.map(function(sale) {
-                                    return (
-                                        <tr key={sale.id} className='align-middle'>
-                                            <td>{getProductName(sale.productId)}</td>
-                                            <td>{sale.note}</td>
-                                            <td className='text-end'>{sale.quantity}</td>
-                                            <td className='text-end text-nowrap'>{Formats.asMoney(sale.totalPrice)}</td>
-
-                                            <td className='text-end'>
-                                                <Button
-                                                    variant='outline-primary'
-                                                    size='sm'
-                                                    className='me-1'
-                                                    title={phrases.get('components.pages.WorkdayDetailPage.edit.tooltip')}
-                                                    onClick={() => navigate(Links.getEditSale(id, sale.id))}>
-
-                                                    <i className='bi bi-pencil'></i>
-                                                </Button>
-
-                                                <Button
-                                                    variant='outline-danger'
-                                                    size='sm'
-                                                    title={phrases.get('components.pages.WorkdayDetailPage.delete.tooltip')}
-                                                    onClick={() => handleDeleteRequest(sale)}>
-
-                                                    <i className='bi bi-trash'></i>
-                                                </Button>
-                                            </td>
-                                        </tr>
-                                    );
-                                })}
-                            </tbody>
-
-                            <tfoot className='table-group-divider'>
-                                <tr>
-                                    <th>{phrases.get('components.pages.WorkdayDetailPage.total')}</th>
-                                    <th></th>
-                                    <th className='text-end'>{getTotalQuantity()}</th>
-                                    <th className='text-end'>{Formats.asMoney(getTotalRevenue())}</th>
-                                    <th></th>
-                                </tr>
-                            </tfoot>
-                        </Table>
+                        <SaleTable />
+                        <SaleCards />
                     </>
                 )}
             </Container>

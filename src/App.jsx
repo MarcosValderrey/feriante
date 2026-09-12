@@ -12,7 +12,6 @@ import OrganizersListPage from './components/pages/organizers/OrganizersListPage
 import ProductsFormPage from './components/pages/products/ProductsFormPage';
 import ProductsListPage from './components/pages/products/ProductsListPage';
 import SalesFormPage from './components/pages/sales/SalesFormPage';
-import SalesPage from './components/pages/SalesPage';
 import SummaryPage from './components/pages/SummaryPage';
 import WorkdayDetailPage from './components/pages/workdays/WorkdayDetailPage';
 import WorkdaysFormPage from './components/pages/workdays/WorkdaysFormPage';
@@ -58,9 +57,6 @@ function App() {
             <Route path='/jornadas/nueva' element={<WorkdaysFormPage />}/>
             <Route path='/jornadas/:id/ventas/:saleId' element={<SalesFormPage />}/>
             <Route path='/jornadas/:id/ventas/nueva' element={<SalesFormPage />}/>
-
-            <Route path='/sales' element={<SalesPage />}/>
-            <Route path='/ventas' element={<SalesPage />}/>
 
             <Route path='/summary' element={<SummaryPage />}/>
             <Route path='/resumen' element={<SummaryPage />}/>

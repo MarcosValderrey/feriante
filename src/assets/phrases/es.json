@@ -246,27 +246,6 @@
                     "submit": "Guardar"
                 }
             },
-            "SalesPage": {
-                "title": "Ventas",
-                "subtitle": "Registrá lo que vendiste",
-                "new": "Nueva venta",
-                "empty": "No hay ventas registradas",
-                "table": {
-                    "quantity": "Cantidad",
-                    "name": "Producto",
-                    "note": "Nota",
-                    "price": "Precio",
-                    "previous": "Anterior",
-                    "next": "Siguiente"
-                },
-                "total": {
-                    "name": "Productos"
-                },
-                "error": {
-                    "sales": "No se pudieron cargar las ventas",
-                    "workdays": "No se pudieron cargar las jornadas"
-                }
-            },
             "SummaryPage": {
                 "title": "Resumen",
                 "subtitle": "Mirá cómo vienen tus ventas",

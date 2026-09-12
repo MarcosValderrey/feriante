@@ -10,6 +10,7 @@ import Table from 'react-bootstrap/Table';
 
 import { useNavigate } from 'react-router-dom';
 
+import CardRecordField from '../../common/CardRecordField';
 import PageHeader from '../../common/PageHeader';
 import { deleteProduct, getProducts } from '../../../services/products';
 import { getSalesByProductId } from '../../../services/sales';
@@ -158,42 +159,83 @@ function ProductsListPage() {
 
     function ProductsTable() {
         return (
-            <Table responsive hover size='sm' className='mb-4 small'>
-                <thead>
-                    <tr className='align-middle'>
-                        <th scope='col' className='col-6'>
-                            {phrases.get('components.pages.ProductsListPage.table.name')}
-                        </th>
+            <div className='d-none d-md-block'>
+                <Card className='shadow-sm'>
+                    <Card.Body>
+                        <Table responsive hover size='sm' className='mb-4 small'>
+                            <thead>
+                                <tr className='align-middle'>
+                                    <th scope='col' className='col-6'>
+                                        {phrases.get('components.pages.ProductsListPage.table.name')}
+                                    </th>
 
-                        <th scope='col' className='col-4'>
-                            {phrases.get('components.pages.ProductsListPage.table.description')}
-                        </th>
+                                    <th scope='col' className='col-4'>
+                                        {phrases.get('components.pages.ProductsListPage.table.description')}
+                                    </th>
 
-                        <th scope='col' className='col-2 text-end'>
-                            {phrases.get('components.pages.ProductsListPage.table.actions')}
-                        </th>
-                    </tr>
-                </thead>
+                                    <th scope='col' className='col-2 text-end'>
+                                        {phrases.get('components.pages.ProductsListPage.table.actions')}
+                                    </th>
+                                </tr>
+                            </thead>
 
-                <tbody className='table-group-divider'>
-                    {products.map(function(product) {
-                        return (
-                            <tr key={product.id} className='align-middle'>
-                                <td>{product.name}</td>
+                            <tbody className='table-group-divider'>
+                                {products.map(function(product) {
+                                    return (
+                                        <tr key={product.id} className='align-middle'>
+                                            <td>{product.name}</td>
 
-                                <td className='text-body-secondary'>
-                                    {product.description || '—'}
-                                </td>
+                                            <td className='text-body-secondary'>
+                                                {product.description || '—'}
+                                            </td>
 
-                                <td className='text-end text-nowrap'>
+                                            <td className='text-end text-nowrap'>
+                                                <EditButton productId={product.id} />
+                                                <DeleteButton product={product} />
+                                            </td>
+                                        </tr>
+                                    );
+                                })}
+                            </tbody>
+                        </Table>
+                    </Card.Body>
+                </Card>
+            </div>
+        );
+    }
+
+    function ProductCards() {
+        return (
+            <div className='d-md-none'>
+                {products.map(function(product) {
+                    return (
+                        <Card key={product.id} className='mb-3 shadow-sm'>
+                            <Card.Header className='d-flex justify-content-between align-items-center'>
+                                <span className='fw-semibold'>
+                                    
+                                </span>
+
+                                <div className='text-nowrap'>
                                     <EditButton productId={product.id} />
                                     <DeleteButton product={product} />
-                                </td>
-                            </tr>
-                        );
-                    })}
-                </tbody>
-            </Table>
+                                </div>
+                            </Card.Header>
+
+                            <Card.Body className='p-0'>
+                                <CardRecordField
+                                    label={phrases.get('components.pages.ProductsListPage.table.name')}
+                                    value={product ? product.name : '—'}
+                                />
+
+                                <CardRecordField
+                                    label={phrases.get('components.pages.ProductsListPage.table.description')}
+                                    value={product.description || '—'}
+                                />
+                            </Card.Body>
+                        </Card>
+                    );
+                })}
+            </div>
         );
     }
 
@@ -279,10 +321,15 @@ function ProductsListPage() {
         );
     }
 
-    var table = null;
+    var content = null;
 
     if (products && products.length > 0) {
-        table = <ProductsTable />;
+        content = (
+            <>
+                <ProductsTable />
+                <ProductCards />
+            </>
+        );
     }
 
     return (
@@ -290,17 +337,13 @@ function ProductsListPage() {
             <Header />
 
             <Container fluid>
-                <Card className='shadow-sm'>
-                    <Card.Body>
-                        {loading ? (
-                            <Loader />
-                        ) : products.length === 0 ? (
-                            <Empty />
-                        ) : (
-                            table
-                        )}
-                    </Card.Body>
-                </Card>
+                {loading ? (
+                    <Loader />
+                ) : products.length === 0 ? (
+                    <Empty />
+                ) : (
+                    content
+                )}
             </Container>
 
             <DeleteConfirmationModal />
