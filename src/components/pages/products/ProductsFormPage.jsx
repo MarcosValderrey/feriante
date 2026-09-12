@@ -11,6 +11,7 @@ import PageHeader from '../../../components/common/PageHeader';
 import { createProduct } from '../../../services/products';
 import { getProductById } from '../../../services/products';
 import { updateProduct } from '../../../services/products';
+import Links from '../../../utils/Links';
 import phrases from '../../../utils/Phrases';
 
 
@@ -75,7 +76,7 @@ function ProductsFormPage() {
 
         operation
             .then(function() {
-                navigate(phrases.get('App.paths.products.list'));
+                navigate(Links.getProductList());
             })
             .catch(function(error) {
                 console.error('Failed to save product:', error);
@@ -85,7 +86,7 @@ function ProductsFormPage() {
     }
 
     function handleCancel() {
-        navigate(phrases.get('App.paths.products.list'));
+        navigate(Links.getProductList());
     }
 
     function Header() {

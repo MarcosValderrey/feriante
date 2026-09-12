@@ -12,6 +12,7 @@ import { createSale } from '../../../services/sales.js';
 import { getSaleById } from '../../../services/sales.js';
 import { updateSale } from '../../../services/sales.js';
 import { getProducts } from '../../../services/products.js';
+import Links from '../../../utils/Links.jsx';
 import phrases from '../../../utils/Phrases';
 
 
@@ -45,7 +46,7 @@ function SaleFormPage() {
                 const sale = await getSaleById(Number(saleId));
 
                 if (!sale) {
-                    navigate(`/workdays/${id}`);
+                    navigate(Links.getFullWorkday(id));
                     return;
                 }
 
@@ -94,7 +95,7 @@ function SaleFormPage() {
                 await createSale(data);
             }
 
-            navigate(`${phrases.get('App.paths.workdays.list')}/${id}`);
+            navigate(Links.getFullWorkday(id));
         } catch (error) {
             console.error('Failed to save sale:', error);
         } finally {
@@ -103,7 +104,7 @@ function SaleFormPage() {
     }
 
     function handleCancel() {
-        navigate(phrases.get('App.paths.workdays.list'));
+        navigate(Links.getFullWorkday(id));
     }
 
     function Header() {

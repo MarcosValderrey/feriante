@@ -14,6 +14,7 @@ import PageHeader from '../../common/PageHeader';
 import { deleteOrganizer } from '../../../services/organizers';
 import { getOrganizers } from '../../../services/organizers';
 import { getWorkdaysByOrganizerId } from '../../../services/workdays';
+import Links from '../../../utils/Links';
 import phrases from '../../../utils/Phrases';
 
 
@@ -93,7 +94,7 @@ function OrganizersListPage() {
             <Button
                 variant='primary'
                 onClick={function() {
-                    navigate(phrases.get('App.paths.organizers.new'));
+                    navigate(Links.getNewOrganizer());
                 }}>
                 <i className='bi bi-plus-lg me-1'></i>
                 <span>{phrases.get('components.pages.OrganizersListPage.new')}</span>
@@ -109,9 +110,7 @@ function OrganizersListPage() {
                 className='me-1'
                 title={phrases.get('components.pages.OrganizersListPage.edit.tooltip')}
                 onClick={function() {
-                    navigate(
-                        `${phrases.get('App.paths.organizers.edit')}${organizerId}`
-                    );
+                    navigate(Links.getEditOrganizer(organizerId));
                 }}>
                 <i className='bi bi-pencil'></i>
             </Button>

@@ -15,6 +15,7 @@ import { deleteSale } from '../../../services/sales.js';
 import { getSalesByWorkdayId } from '../../../services/sales.js';
 import { getProducts } from '../../../services/products.js';
 import Formats from '../../../utils/Formats.jsx';
+import Links from '../../../utils/Links.jsx';
 import phrases from '../../../utils/Phrases';
 
 
@@ -129,7 +130,7 @@ function WorkdayDetailPage() {
 
                     <Button
                         variant='outline-primary'
-                        onClick={() => navigate('/workdays')}>
+                        onClick={() => navigate(Links.getWorkdayList())}>
 
                         {phrases.get('components.pages.WorkdayDetailPage.empty.back')}
                     </Button>
@@ -147,7 +148,7 @@ function WorkdayDetailPage() {
                 action={
                     <Button
                         variant='outline-primary'
-                        onClick={() => navigate(`${phrases.get('App.paths.workdays.list')}/${id}${phrases.get('App.paths.edit')}`)}>
+                        onClick={() => navigate(Links.getEditWorkday(id))}>
                         <i className='bi bi-pencil me-2'></i>
                         {phrases.get('components.pages.WorkdayDetailPage.editWorkday')}
                     </Button>
@@ -168,13 +169,7 @@ function WorkdayDetailPage() {
                     <h2 className='h5 mb-0'>{phrases.get('components.pages.WorkdayDetailPage.sales.title')}</h2>
 
                     <Button
-                        onClick={() => {
-                            const workdays = phrases.get('App.paths.workdays.list');
-                            const sales = phrases.get('App.paths.sales');
-                            const newSale = phrases.get('App.paths.new.female');
-
-                            navigate(`${workdays}/${id}${sales}${newSale}`);
-                        }}>
+                        onClick={() => navigate(Links.getNewSale(id))}>
                         <i className='bi bi-plus-lg me-2'></i>
                         {phrases.get('components.pages.WorkdayDetailPage.recordSale')}
                     </Button>
@@ -214,9 +209,7 @@ function WorkdayDetailPage() {
                                                     size='sm'
                                                     className='me-1'
                                                     title={phrases.get('components.pages.WorkdayDetailPage.edit.tooltip')}
-                                                    onClick={() => navigate(
-                                                        `${phrases.get('App.paths.workdays.list')}/${id}${phrases.get('App.paths.sales')}/${sale.id}`
-                                                    )}>
+                                                    onClick={() => navigate(Links.getEditSale(id, sale.id))}>
 
                                                     <i className='bi bi-pencil'></i>
                                                 </Button>

@@ -13,6 +13,7 @@ import { useNavigate } from 'react-router-dom';
 import PageHeader from '../../common/PageHeader';
 import { deleteProduct, getProducts } from '../../../services/products';
 import { getSalesByProductId } from '../../../services/sales';
+import Links from '../../../utils/Links';
 import phrases from '../../../utils/Phrases';
 
 
@@ -91,7 +92,7 @@ function ProductsListPage() {
             <Button
                 variant='primary'
                 onClick={function() {
-                    navigate(phrases.get('App.paths.products.new'));
+                    navigate(Links.getNewProduct());
                 }}>
                 <i className='bi bi-plus-lg me-1'></i>
                 <span>{phrases.get('components.pages.ProductsListPage.new')}</span>
@@ -107,7 +108,7 @@ function ProductsListPage() {
                 className='me-1'
                 title={phrases.get('components.pages.ProductsListPage.edit.tooltip')}
                 onClick={function() {
-                    navigate(`${phrases.get('App.paths.products.edit')}${productId}`);
+                    navigate(Links.getEditProduct(productId));
                 }}>
                 <i className='bi bi-pencil'></i>
             </Button>

@@ -1,18 +1,18 @@
 import { useEffect, useState } from 'react';
-import Button from 'react-bootstrap/Button';
-import Col from 'react-bootstrap/Col';
-import Container from 'react-bootstrap/Container';
-import Form from 'react-bootstrap/Form';
-import Row from 'react-bootstrap/Row';
-import Spinner from 'react-bootstrap/Spinner';
+import { Button } from 'react-bootstrap';
+import { Col } from 'react-bootstrap';
+import { Container } from 'react-bootstrap';
+import { Form } from 'react-bootstrap';
+import { Row } from 'react-bootstrap';
+import { Spinner } from 'react-bootstrap';
 import { useNavigate, useParams } from 'react-router-dom';
 
 import PageHeader from '../../common/PageHeader.jsx';
-
 import { createWorkday } from '../../../services/workdays.js';
 import { getWorkdayById } from '../../../services/workdays.js';
 import { updateWorkday } from '../../../services/workdays.js';
 import { getOrganizers } from '../../../services/organizers.js';
+import Links from '../../../utils/Links.jsx';
 import phrases from '../../../utils/Phrases';
 
 
@@ -45,7 +45,7 @@ function WorkdayFormPage() {
                 const workday = await getWorkdayById(Number(id));
 
                 if (!workday) {
-                    navigate('/workdays');
+                    navigate(Links.getWorkdayList());
                     return;
                 }
 
@@ -99,7 +99,7 @@ function WorkdayFormPage() {
                 await createWorkday(data);
             }
 
-            navigate(phrases.get('App.paths.workdays.list'));
+            navigate(-1);
         } catch (error) {
             console.error('Failed to save workday:', error);
         } finally {
@@ -108,7 +108,7 @@ function WorkdayFormPage() {
     }
 
     function handleCancel() {
-        navigate(phrases.get('App.paths.workdays.list'));
+        navigate(-1);
     }
 
     function Header() {

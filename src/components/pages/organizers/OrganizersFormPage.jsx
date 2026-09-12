@@ -16,6 +16,7 @@ import PageHeader from '../../common/PageHeader';
 import { createOrganizer } from '../../../services/organizers';
 import { getOrganizerById } from '../../../services/organizers';
 import { updateOrganizer } from '../../../services/organizers';
+import Links from '../../../utils/Links';
 import phrases from '../../../utils/Phrases';
 
 
@@ -57,7 +58,7 @@ function OrganizersFormPage() {
     }, [editing, id]);
 
     function handleCancel() {
-        navigate(phrases.get('App.paths.organizers.list'));
+        navigate(Links.getOrganizerList());
     }
 
     async function handleSubmit(event) {
@@ -78,7 +79,7 @@ function OrganizersFormPage() {
                 await createOrganizer(organizer);
             }
 
-            navigate(phrases.get('App.paths.organizers.list'));
+            navigate(Links.getOrganizerList());
         } catch (error) {
             console.error('Failed to save organizer:', error);
             setError(phrases.get('components.pages.OrganizersFormPage.error.organization.cannotSave'));

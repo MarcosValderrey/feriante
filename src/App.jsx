@@ -33,17 +33,17 @@ function App() {
 
             <Route path='/organizers' element={<OrganizersListPage />}/>
             <Route path='/organizers/new' element={<OrganizersFormPage />}/>
-            <Route path='/organizers/:id' element={<OrganizersFormPage />}/>
+            <Route path='/organizers/:id/edit' element={<OrganizersFormPage />}/>
             <Route path='/organizadores' element={<OrganizersListPage />}/>
             <Route path='/organizadores/nuevo' element={<OrganizersFormPage />}/>
-            <Route path='/organizadores/:id' element={<OrganizersFormPage />}/>
+            <Route path='/organizadores/:id/editar' element={<OrganizersFormPage />}/>
 
             <Route path='/products/new' element={<ProductsFormPage />}/>
             <Route path='/products' element={<ProductsListPage />}/>
-            <Route path='/products/:id' element={<ProductsFormPage />}/>
+            <Route path='/products/:id/edit' element={<ProductsFormPage />}/>
             <Route path='/productos' element={<ProductsListPage />}/>
             <Route path='/productos/nuevo' element={<ProductsFormPage />}/>
-            <Route path='/productos/:id' element={<ProductsFormPage />}/>
+            <Route path='/productos/:id/editar' element={<ProductsFormPage />}/>
 
             <Route path='/workdays' element={<WorkdaysListPage />}/>
             <Route path='/workdays/:id/edit' element={<WorkdaysFormPage />}/>

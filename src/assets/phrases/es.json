@@ -7,23 +7,11 @@
                 "female": "/nueva",
                 "male": "/nuevo"
             },
-            "organizers": {
-                "list": "/organizadores",
-                "new": "/organizadores/nuevo",
-                "edit": "/organizadores/"
-            },
-            "products": {
-                "list": "/productos",
-                "new": "/productos/nuevo",
-                "edit": "/productos/"
-            },
+            "organizers": "/organizadores",
+            "products": "/productos",
             "sales": "/ventas",
             "summary": "/resumen",
-            "workdays": {
-                "list": "/jornadas",
-                "new": "/jornadas/nueva",
-                "edit": "/jornadas/"
-            }
+            "workdays": "/jornadas"
         }
     },
     "components": {

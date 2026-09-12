@@ -4,6 +4,7 @@ import Navbar from 'react-bootstrap/Navbar';
 
 import { NavLink } from 'react-router-dom';
 
+import Links from '../../utils/Links';
 import phrases from '../../utils/Phrases';
 
 
@@ -20,11 +21,11 @@ function Header() {
                 <Navbar.Toggle aria-controls='feriante-navbar-nav'></Navbar.Toggle>
                 <Navbar.Collapse id='feriante-navbar-nav'>
                     <Nav className='ms-auto'>
-                        <Nav.Link as={NavLink} to={phrases.get('App.paths.products.list')}>{phrases.get('components.common.Header.products')}</Nav.Link>
-                        <Nav.Link as={NavLink} to={phrases.get('App.paths.organizers.list')}>{phrases.get('components.common.Header.organizers')}</Nav.Link>
-                        <Nav.Link as={NavLink} to={phrases.get('App.paths.workdays.list')}>{phrases.get('components.common.Header.workdays')}</Nav.Link>
-                        <Nav.Link as={NavLink} to={phrases.get('App.paths.summary')}>{phrases.get('components.common.Header.summary')}</Nav.Link>
-                        <Nav.Link as={NavLink} to={phrases.get('App.paths.development')}>{phrases.get('components.common.Header.development')}</Nav.Link>
+                        <Nav.Link as={NavLink} to={Links.getProductList()}>{phrases.get('components.common.Header.products')}</Nav.Link>
+                        <Nav.Link as={NavLink} to={Links.getOrganizerList()}>{phrases.get('components.common.Header.organizers')}</Nav.Link>
+                        <Nav.Link as={NavLink} to={Links.getWorkdayList()}>{phrases.get('components.common.Header.workdays')}</Nav.Link>
+                        <Nav.Link as={NavLink} to={Links.getSummary()}>{phrases.get('components.common.Header.summary')}</Nav.Link>
+                        <Nav.Link as={NavLink} to={Links.getDevelopment()}>{phrases.get('components.common.Header.development')}</Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
             </Container>
