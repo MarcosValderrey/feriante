@@ -1,6 +1,6 @@
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
+import { Container } from 'react-bootstrap';
+import { Nav } from 'react-bootstrap';
+import { Navbar } from 'react-bootstrap';
 
 import { NavLink } from 'react-router-dom';
 
@@ -13,7 +13,7 @@ function Header() {
         <Navbar bg='body' expand='lg' className='mb-2 shadow-sm' sticky='top'>
             <Container fluid>
                 <Navbar.Brand href='/' className='d-flex align-items-center gap-2'>
-                    <img src='images/icons/shop-32x32.png' alt='Feriante Logo' width={32} height={32} className='d-inline-block' />
+                    <img src='/images/icons/shop-32x32.png' alt='Feriante Logo' width={32} height={32} className='d-inline-block' />
                     <span className='align-middle fw-bold text-secondary'>Feriante</span>
                     <span className='badge rounded-pill text-bg-primary'>{__APP_VERSION__}</span>
                 </Navbar.Brand>
