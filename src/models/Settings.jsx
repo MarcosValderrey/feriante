@@ -79,4 +79,6 @@ class Settings {
 }
 
 
-export default Settings;
+export {
+    Settings
+};

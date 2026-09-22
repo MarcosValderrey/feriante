@@ -1,18 +1,18 @@
 import { useEffect } from 'react';
 import { useState } from 'react';
 
-import Card from 'react-bootstrap/Card';
-import Col from 'react-bootstrap/Col';
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Spinner from 'react-bootstrap/Spinner';
-import Table from 'react-bootstrap/Table';
+import { Card } from 'react-bootstrap';
+import { Col } from 'react-bootstrap';
+import { Container } from 'react-bootstrap';
+import { Row } from 'react-bootstrap';
+import { Spinner } from 'react-bootstrap';
+import { Table } from 'react-bootstrap';
 
 import { useSettings } from '../../context/SettingsContext.jsx';
-import PageHeader from '../common/PageHeader.jsx';
+import { PageHeader } from '../common/PageHeader.jsx';
 import { getSummary } from '../../services/insights.js';
-import Formats from '../../utils/Formats.jsx';
-import phrases from '../../utils/Phrases.jsx';
+import { Formats } from '../../utils/Formats.jsx';
+import { phrases } from '../../utils/Phrases.jsx';
 
 
 function SummaryPage() {
@@ -450,4 +450,6 @@ function asQuantity(value) {
 };
 
 
-export default SummaryPage;
+export {
+    SummaryPage
+};

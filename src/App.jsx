@@ -1,21 +1,23 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
+import { Route } from 'react-router-dom';
+import { Routes } from 'react-router-dom';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 
 import './App.css';
-import Header from './components/common/Header';
-import DevelopmentPage from './components/pages/DevelopmentPage';
-import HomePage from './components/pages/HomePage';
-import OrganizersFormPage from './components/pages/organizers/OrganizersFormPage';
-import OrganizersListPage from './components/pages/organizers/OrganizersListPage';
-import ProductsFormPage from './components/pages/products/ProductsFormPage';
-import ProductsListPage from './components/pages/products/ProductsListPage';
-import SalesFormPage from './components/pages/sales/SalesFormPage';
-import SummaryPage from './components/pages/SummaryPage';
-import WorkdayDetailPage from './components/pages/workdays/WorkdayDetailPage';
-import WorkdaysFormPage from './components/pages/workdays/WorkdaysFormPage';
-import WorkdaysListPage from './components/pages/workdays/WorkdaysListPage';
+import { Header } from './components/common/Header';
+import { DevelopmentPage } from './components/pages/DevelopmentPage';
+import { HomePage } from './components/pages/HomePage';
+import { OrganizersFormPage } from './components/pages/organizers/OrganizersFormPage';
+import { OrganizersListPage } from './components/pages/organizers/OrganizersListPage';
+import { ProductsFormPage } from './components/pages/products/ProductsFormPage';
+import { ProductsListPage } from './components/pages/products/ProductsListPage';
+import { SalesFormPage } from './components/pages/sales/SalesFormPage';
+import { SummaryPage } from './components/pages/SummaryPage';
+import { WorkdayDetailPage } from './components/pages/workdays/WorkdayDetailPage';
+import { WorkdaysFormPage } from './components/pages/workdays/WorkdaysFormPage';
+import { WorkdaysListPage } from './components/pages/workdays/WorkdaysListPage';
 
 
 function App() {
@@ -68,4 +70,6 @@ function App() {
 };
 
 
-export default App;
+export {
+  App
+};

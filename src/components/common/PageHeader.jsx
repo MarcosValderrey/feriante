@@ -1,6 +1,6 @@
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
+import { Container } from 'react-bootstrap';
+import { Col } from 'react-bootstrap';
+import { Row } from 'react-bootstrap';
 
 
 function PageHeader({ title, subtitle, icon, action = null }) {
@@ -27,4 +27,6 @@ function PageHeader({ title, subtitle, icon, action = null }) {
 }
 
 
-export default PageHeader;
+export {
+    PageHeader
+};

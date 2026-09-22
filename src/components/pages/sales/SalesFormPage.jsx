@@ -1,22 +1,27 @@
-import { useEffect, useState } from 'react';
-import Button from 'react-bootstrap/Button';
-import Col from 'react-bootstrap/Col';
-import Container from 'react-bootstrap/Container';
-import Form from 'react-bootstrap/Form';
-import Row from 'react-bootstrap/Row';
-import Spinner from 'react-bootstrap/Spinner';
-import { useNavigate, useParams } from 'react-router-dom';
 
-import PageHeader from '../../common/PageHeader.jsx';
+import { useEffect } from 'react';
+import { useState } from 'react';
+
+import { Button } from 'react-bootstrap';
+import { Col } from 'react-bootstrap';
+import { Container } from 'react-bootstrap';
+import { Form } from 'react-bootstrap';
+import { Row } from 'react-bootstrap';
+import { Spinner } from 'react-bootstrap';
+
+import { useNavigate } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
+
+import { PageHeader } from '../../common/PageHeader.jsx';
 import { createSale } from '../../../services/sales.js';
 import { getSaleById } from '../../../services/sales.js';
 import { updateSale } from '../../../services/sales.js';
 import { getProducts } from '../../../services/products.js';
-import Links from '../../../utils/Links.jsx';
-import phrases from '../../../utils/Phrases';
+import { Links } from '../../../utils/Links.jsx';
+import { phrases } from '../../../utils/Phrases';
 
 
-function SaleFormPage() {
+function SalesFormPage() {
     const { id, saleId } = useParams();
     const navigate = useNavigate();
 
@@ -242,4 +247,6 @@ function SaleFormPage() {
 }
 
 
-export default SaleFormPage;
+export {
+    SalesFormPage
+};

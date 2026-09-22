@@ -55,7 +55,7 @@ async function clearDatabase(database) {
     }
 
     return new Promise(function(resolve, reject) {
-        const transaction = database.transaction(storeNames,'readwrite');
+        const transaction = database.transaction(storeNames, 'readwrite');
 
         storeNames.forEach(function(storeName) {
             transaction.objectStore(storeName).clear();

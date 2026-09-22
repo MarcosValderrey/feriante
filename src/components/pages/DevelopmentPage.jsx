@@ -1,25 +1,27 @@
 import { useState } from 'react';
-import Alert from 'react-bootstrap/Alert';
-import Button from 'react-bootstrap/Button';
-import Card from 'react-bootstrap/Card';
-import Col from 'react-bootstrap/Col';
-import Container from 'react-bootstrap/Container';
-import Form from 'react-bootstrap/Form';
-import Modal from 'react-bootstrap/Modal';
-import Row from 'react-bootstrap/Row';
-import Spinner from 'react-bootstrap/Spinner';
 
-import PageHeader from '../common/PageHeader.jsx';
+import { Alert } from 'react-bootstrap';
+import { Button } from 'react-bootstrap';
+import { Card } from 'react-bootstrap';
+import { Col } from 'react-bootstrap';
+import { Container } from 'react-bootstrap';
+import { Form } from 'react-bootstrap';
+import { Modal } from 'react-bootstrap';
+import { Row } from 'react-bootstrap';
+import { Spinner } from 'react-bootstrap';
+
+import developmentSmallFixture from '../../assets/fixtures/development-small.json';
+import developmentLargeFixture from '../../assets/fixtures/development-large.json';
+
+import { PageHeader } from '../common/PageHeader.jsx';
 import { clearDatabase } from '../../backend/database.js';
 import { openDatabase } from '../../backend/database.js';
 import { truncateDatabase } from '../../backend/database.js';
 import { importSemanticData } from '../../backend/migration.js';
-import developmentSmallFixture from '../../assets/fixtures/development-small.json';
-import developmentLargeFixture from '../../assets/fixtures/development-large.json';
-import phrases from '../../utils/Phrases';
+import { phrases } from '../../utils/Phrases';
 
 
-function DeveloperPage() {
+function DevelopmentPage() {
     const [loading, setLoading] = useState(false);
     const [message, setMessage] = useState(null);
     const [showDeleteModal, setShowDeleteModal] = useState(false);
@@ -295,4 +297,6 @@ function DeveloperPage() {
 }
 
 
-export default DeveloperPage;
+export {
+    DevelopmentPage
+};

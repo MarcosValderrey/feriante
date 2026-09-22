@@ -69,4 +69,7 @@ class Phrases {
 // Single instance
 const phrases = new Phrases();
 
-export default phrases;
+
+export {
+    phrases
+};

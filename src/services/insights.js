@@ -4,11 +4,6 @@ import { getSales } from './sales.js';
 import { getWorkdays } from './workdays.js';
 
 
-/**
- * Get consolidated sales summary.
- *
- * @returns {Promise<Object>}
- */
 async function getSummary() {
     const [
         sales,

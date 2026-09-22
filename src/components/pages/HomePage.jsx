@@ -1,14 +1,11 @@
-import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Col } from 'react-bootstrap';
+import { Container } from 'react-bootstrap';
+import { Row } from 'react-bootstrap';
 
-import Col from 'react-bootstrap/Col';
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-
-import JumboLink from '../common/JumboLink';
-import Title from '../common/Title';
-import Links from '../../utils/Links';
-import phrases from '../../utils/Phrases';
+import { JumboLink } from '../common/JumboLink';
+import { Title } from '../common/Title';
+import { Links } from '../../utils/Links';
+import { phrases } from '../../utils/Phrases';
 
 
 function HomePage() {
@@ -75,4 +72,6 @@ function HomePage() {
 }
 
 
-export default HomePage;
+export {
+    HomePage
+};

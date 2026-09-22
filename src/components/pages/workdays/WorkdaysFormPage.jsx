@@ -1,22 +1,26 @@
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
+import { useState } from 'react';
+
 import { Button } from 'react-bootstrap';
 import { Col } from 'react-bootstrap';
 import { Container } from 'react-bootstrap';
 import { Form } from 'react-bootstrap';
 import { Row } from 'react-bootstrap';
 import { Spinner } from 'react-bootstrap';
-import { useNavigate, useParams } from 'react-router-dom';
 
-import PageHeader from '../../common/PageHeader.jsx';
+import { useNavigate } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
+
+import { PageHeader } from '../../common/PageHeader.jsx';
 import { createWorkday } from '../../../services/workdays.js';
 import { getWorkdayById } from '../../../services/workdays.js';
 import { updateWorkday } from '../../../services/workdays.js';
 import { getOrganizers } from '../../../services/organizers.js';
-import Links from '../../../utils/Links.jsx';
-import phrases from '../../../utils/Phrases';
+import { Links } from '../../../utils/Links.jsx';
+import { phrases } from '../../../utils/Phrases';
 
 
-function WorkdayFormPage() {
+function WorkdaysFormPage() {
     const { id } = useParams();
     const navigate = useNavigate();
 
@@ -232,4 +236,6 @@ function WorkdayFormPage() {
 }
 
 
-export default WorkdayFormPage;
+export {
+    WorkdaysFormPage
+};

@@ -1,20 +1,22 @@
 import { useEffect } from 'react';
 import { useState } from 'react';
+
 import { Button } from 'react-bootstrap';
 import { Card } from 'react-bootstrap';
 import { Container } from 'react-bootstrap';
 import { Modal } from 'react-bootstrap';
 import { Spinner } from 'react-bootstrap';
 import { Table } from 'react-bootstrap';
+
 import { useNavigate } from 'react-router-dom';
 
-import CardRecordField from '../../common/CardRecordField';
-import PageHeader from '../../common/PageHeader';
+import { CardRecordField } from '../../common/CardRecordField';
+import { PageHeader } from '../../common/PageHeader';
 import { deleteOrganizer } from '../../../services/organizers';
 import { getOrganizers } from '../../../services/organizers';
 import { getWorkdaysByOrganizerId } from '../../../services/workdays';
-import Links from '../../../utils/Links';
-import phrases from '../../../utils/Phrases';
+import { Links } from '../../../utils/Links';
+import { phrases } from '../../../utils/Phrases';
 
 
 function OrganizersListPage() {
@@ -366,4 +368,6 @@ function OrganizersListPage() {
 }
 
 
-export default OrganizersListPage;
+export {
+    OrganizersListPage
+};

@@ -10,14 +10,14 @@ import { Table } from 'react-bootstrap';
 
 import { useNavigate } from 'react-router-dom';
 
-import CardRecordField from '../../common/CardRecordField';
-import PageHeader from '../../common/PageHeader';
+import { CardRecordField } from '../../common/CardRecordField';
+import { PageHeader } from '../../common/PageHeader';
 import { deleteWorkday, getWorkdays } from '../../../services/workdays';
 import { getSalesByWorkdayId } from '../../../services/sales';
 import { getOrganizerById } from '../../../services/organizers';
-import Formats from '../../../utils/Formats.jsx';
-import Links from '../../../utils/Links.jsx';
-import phrases from '../../../utils/Phrases';
+import { Formats } from '../../../utils/Formats.jsx';
+import { Links } from '../../../utils/Links.jsx';
+import { phrases } from '../../../utils/Phrases';
 
 
 function WorkdaysListPage() {
@@ -431,4 +431,6 @@ function WorkdaysListPage() {
 }
 
 
-export default WorkdaysListPage;
+export {
+    WorkdaysListPage
+};

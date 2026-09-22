@@ -16,4 +16,6 @@ function JumboLink({ href, icon, title, description }) {
 }
 
 
-export default JumboLink;
+export {
+    JumboLink
+};

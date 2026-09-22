@@ -1,6 +1,8 @@
-import { createContext, useContext, useState } from 'react';
+import { createContext } from 'react';
+import { useContext } from 'react';
+import { useState } from 'react';
 
-import Settings from '../models/Settings';
+import { Settings } from '../models/Settings';
 
 
 const SettingsContext = createContext();

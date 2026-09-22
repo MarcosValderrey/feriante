@@ -27,4 +27,6 @@ Title.propTypes = {
 };
 
 
-export default Title;
+export {
+    Title
+};

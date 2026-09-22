@@ -1,18 +1,21 @@
-import { useEffect, useState } from 'react';
-import { useNavigate, useParams } from 'react-router-dom';
+import { useEffect } from 'react';
+import { useState } from 'react';
 
-import Button from 'react-bootstrap/Button';
-import Card from 'react-bootstrap/Card';
-import Container from 'react-bootstrap/Container';
-import Form from 'react-bootstrap/Form';
-import Spinner from 'react-bootstrap/Spinner';
+import { Button } from 'react-bootstrap';
+import { Card } from 'react-bootstrap';
+import { Container } from 'react-bootstrap';
+import { Form } from 'react-bootstrap';
+import { Spinner } from 'react-bootstrap';
 
-import PageHeader from '../../../components/common/PageHeader';
+import { useNavigate } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
+
+import { PageHeader } from '../../../components/common/PageHeader';
 import { createProduct } from '../../../services/products';
 import { getProductById } from '../../../services/products';
 import { updateProduct } from '../../../services/products';
-import Links from '../../../utils/Links';
-import phrases from '../../../utils/Phrases';
+import { Links } from '../../../utils/Links';
+import { phrases } from '../../../utils/Phrases';
 
 
 function ProductsFormPage() {
@@ -216,4 +219,6 @@ function ProductsFormPage() {
 }
 
 
-export default ProductsFormPage;
+export {
+    ProductsFormPage
+};

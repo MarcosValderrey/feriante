@@ -1,4 +1,5 @@
-import { openDatabase, STORES } from '../backend/database.js';
+import { openDatabase } from '../backend/database.js';
+import { STORES } from '../backend/database.js';
 
 
 async function getWorkdays() {

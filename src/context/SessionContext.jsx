@@ -1,6 +1,8 @@
-import React, { createContext, useContext, useState } from 'react';
+import { createContext } from 'react';
+import { useContext } from 'react';
+import { useState } from 'react';
 
-import Session from '../models/Session';
+import { Session } from '../models/Session';
 
 
 const SessionContext = createContext();

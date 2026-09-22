@@ -1,22 +1,26 @@
-import { useEffect, useState } from 'react';
-import Button from 'react-bootstrap/Button';
-import Card from 'react-bootstrap/Card';
-import Container from 'react-bootstrap/Container';
-import Modal from 'react-bootstrap/Modal';
-import Spinner from 'react-bootstrap/Spinner';
-import Table from 'react-bootstrap/Table';
-import { useNavigate, useParams } from 'react-router-dom';
+import { useEffect } from 'react';
+import { useState } from 'react';
 
-import CardRecordField from '../../common/CardRecordField.jsx';
-import PageHeader from '../../common/PageHeader.jsx';
+import { Button } from 'react-bootstrap';
+import { Card } from 'react-bootstrap';
+import { Container } from 'react-bootstrap';
+import { Modal } from 'react-bootstrap';
+import { Spinner } from 'react-bootstrap';
+import { Table } from 'react-bootstrap';
+
+import { useNavigate } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
+
+import { CardRecordField } from '../../common/CardRecordField.jsx';
+import { PageHeader } from '../../common/PageHeader.jsx';
 import { getWorkdayById } from '../../../services/workdays.js';
 import { getOrganizerById } from '../../../services/organizers.js';
 import { deleteSale } from '../../../services/sales.js';
 import { getSalesByWorkdayId } from '../../../services/sales.js';
 import { getProducts } from '../../../services/products.js';
-import Formats from '../../../utils/Formats.jsx';
-import Links from '../../../utils/Links.jsx';
-import phrases from '../../../utils/Phrases';
+import { Formats } from '../../../utils/Formats.jsx';
+import { Links } from '../../../utils/Links.jsx';
+import { phrases } from '../../../utils/Phrases';
 
 
 function WorkdayDetailPage() {
@@ -369,4 +373,6 @@ function WorkdayDetailPage() {
 }
 
 
-export default WorkdayDetailPage;
+export {
+    WorkdayDetailPage
+};

@@ -4,8 +4,8 @@ import { Navbar } from 'react-bootstrap';
 
 import { NavLink } from 'react-router-dom';
 
-import Links from '../../utils/Links';
-import phrases from '../../utils/Phrases';
+import { Links } from '../../utils/Links';
+import { phrases } from '../../utils/Phrases';
 
 
 function Header() {
@@ -34,4 +34,6 @@ function Header() {
 }
 
 
-export default Header;
+export {
+    Header
+};

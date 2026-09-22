@@ -51,4 +51,6 @@ class Formats {
 }
 
 
-export default Formats;
+export {
+    Formats
+};

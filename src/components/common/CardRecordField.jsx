@@ -21,4 +21,6 @@ function CardRecordField({ label, value, hightlight = false }) {
 }
 
 
-export default CardRecordField;
+export {
+    CardRecordField
+};

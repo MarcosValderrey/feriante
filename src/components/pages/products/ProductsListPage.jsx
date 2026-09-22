@@ -1,21 +1,21 @@
 import { useEffect } from 'react';
 import { useState } from 'react';
 
-import Button from 'react-bootstrap/Button';
-import Card from 'react-bootstrap/Card';
-import Container from 'react-bootstrap/Container';
-import Modal from 'react-bootstrap/Modal';
-import Spinner from 'react-bootstrap/Spinner';
-import Table from 'react-bootstrap/Table';
+import { Button } from 'react-bootstrap';
+import { Card } from 'react-bootstrap';
+import { Container } from 'react-bootstrap';
+import { Modal } from 'react-bootstrap';
+import { Spinner } from 'react-bootstrap';
+import { Table } from 'react-bootstrap';
 
 import { useNavigate } from 'react-router-dom';
 
-import CardRecordField from '../../common/CardRecordField';
-import PageHeader from '../../common/PageHeader';
+import { CardRecordField } from '../../common/CardRecordField';
+import { PageHeader } from '../../common/PageHeader';
 import { deleteProduct, getProducts } from '../../../services/products';
 import { getSalesByProductId } from '../../../services/sales';
-import Links from '../../../utils/Links';
-import phrases from '../../../utils/Phrases';
+import { Links } from '../../../utils/Links';
+import { phrases } from '../../../utils/Phrases';
 
 
 function ProductsListPage() {
@@ -353,4 +353,6 @@ function ProductsListPage() {
 }
 
 
-export default ProductsListPage;
+export {
+    ProductsListPage
+};

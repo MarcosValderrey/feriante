@@ -1,4 +1,4 @@
-import phrases from './Phrases';
+import { phrases } from './Phrases';
 
 
 /**
@@ -108,4 +108,6 @@ class Links {
 }
 
 
-export default Links;
+export {
+    Links
+};
