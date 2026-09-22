@@ -2,72 +2,79 @@ import { Col } from 'react-bootstrap';
 import { Container } from 'react-bootstrap';
 import { Row } from 'react-bootstrap';
 
+import { Banner } from '../common/Banner';
+import { ImageCarousel } from '../common/ImageCarousel';
 import { JumboLink } from '../common/JumboLink';
 import { Title } from '../common/Title';
 import { Links } from '../../utils/Links';
+import { Paths } from '../../utils/Paths';
 import { phrases } from '../../utils/Phrases';
 
 
 function HomePage() {
     return (
-        <Container fluid>
-            <Row>
-                <Col>
-                    <Title
-                        title={phrases.get('components.pages.HomePage.title')}
-                        subtitle={phrases.get('components.pages.HomePage.subtitle')}>
-                    </Title>
-                </Col>
-            </Row>
+        <>
+            <ImageCarousel publicImagesUrls={Paths.getCarouselImages()} />
 
-            <Row className='g-3 justify-content-center'>
-                <Col xs={12} sm={6} lg={4}>
-                    <JumboLink
-                        href={Links.getProductList()}
-                        icon='box-seam'
-                        title={phrases.get('components.pages.HomePage.links.products.title')}
-                        description={phrases.get('components.pages.HomePage.links.products.description')}
-                    />
-                </Col>
+            <Container fluid>
+                <Row>
+                    <Col>
+                        <Title
+                            title={phrases.get('components.pages.HomePage.title')}
+                            subtitle={phrases.get('components.pages.HomePage.subtitle')}>
+                        </Title>
+                    </Col>
+                </Row>
 
-                <Col xs={12} sm={6} lg={4}>
-                    <JumboLink
-                        href={Links.getOrganizerList()}
-                        icon='shop'
-                        title={phrases.get('components.pages.HomePage.links.organizers.title')}
-                        description={phrases.get('components.pages.HomePage.links.organizers.description')}
-                    />
-                </Col>
+                <Row className='g-3 justify-content-center'>
+                    <Col xs={12} sm={6} lg={4}>
+                        <JumboLink
+                            href={Links.getProductList()}
+                            icon='box-seam'
+                            title={phrases.get('components.pages.HomePage.links.products.title')}
+                            description={phrases.get('components.pages.HomePage.links.products.description')}
+                        />
+                    </Col>
 
-                <Col xs={12} sm={6} lg={4}>
-                    <JumboLink
-                        href={Links.getWorkdayList()}
-                        icon='calendar-event'
-                        title={phrases.get('components.pages.HomePage.links.workdays.title')}
-                        description={phrases.get('components.pages.HomePage.links.workdays.description')}
-                    />
-                </Col>
+                    <Col xs={12} sm={6} lg={4}>
+                        <JumboLink
+                            href={Links.getOrganizerList()}
+                            icon='shop'
+                            title={phrases.get('components.pages.HomePage.links.organizers.title')}
+                            description={phrases.get('components.pages.HomePage.links.organizers.description')}
+                        />
+                    </Col>
 
-                <Col xs={12} sm={6} lg={4}>
-                    <JumboLink
-                        href={Links.getSummary()}
-                        icon='bar-chart-line'
-                        title={phrases.get('components.pages.HomePage.links.summary.title')}
-                        description={phrases.get('components.pages.HomePage.links.summary.description')}
-                    />
-                </Col>
+                    <Col xs={12} sm={6} lg={4}>
+                        <JumboLink
+                            href={Links.getWorkdayList()}
+                            icon='calendar-event'
+                            title={phrases.get('components.pages.HomePage.links.workdays.title')}
+                            description={phrases.get('components.pages.HomePage.links.workdays.description')}
+                        />
+                    </Col>
 
-                <Col xs={12} sm={6} lg={4}>
-                    <JumboLink
-                        href={Links.getDevelopment()}
-                        icon='code-slash'
-                        title={phrases.get('components.pages.HomePage.links.development.title')}
-                        description={phrases.get('components.pages.HomePage.links.development.description')}
-                    />
-                </Col>
-            </Row>
-                    
-        </Container>
+                    <Col xs={12} sm={6} lg={4}>
+                        <JumboLink
+                            href={Links.getSummary()}
+                            icon='bar-chart-line'
+                            title={phrases.get('components.pages.HomePage.links.summary.title')}
+                            description={phrases.get('components.pages.HomePage.links.summary.description')}
+                        />
+                    </Col>
+
+                    <Col xs={12} sm={6} lg={4}>
+                        <JumboLink
+                            href={Links.getDevelopment()}
+                            icon='code-slash'
+                            title={phrases.get('components.pages.HomePage.links.development.title')}
+                            description={phrases.get('components.pages.HomePage.links.development.description')}
+                        />
+                    </Col>
+                </Row>
+                        
+            </Container>
+        </>
     );
 }
 
